@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
-    public float cameraSpeed = 2f;
 
     private Vector3 initPos = new Vector3();
     private Vector3 newPos = new Vector3();
@@ -20,6 +19,11 @@ public class CameraMovement : MonoBehaviour
         if(Input.GetMouseButton(1)){ // getting new mouse point
 
             newPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        }
+        if(!Input.GetMouseButton(1)){ // make it stop after user stops holding down
+
+            initPos = new Vector3(0, 0, 0);
+            newPos = new Vector3(0, 0, 0);
         }
         
         transform.position += initPos - newPos; // moving camera amount mouse has moved

@@ -4,8 +4,10 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 
 
-public class TileScript : MonoBehaviour
+public class TileScript
 {
+    [SerializeField]
+    private Tilemap map;
 
     public List<Vector3Int> neighbors = new List<Vector3Int>();
 
@@ -13,5 +15,15 @@ public class TileScript : MonoBehaviour
     public float distance = float.PositiveInfinity;
     public bool isWall, isFound;
     public Vector3Int coords = new Vector3Int();
+    public Vector3Int pred = new Vector3Int();
+
+    void Update()
+    {
+
+        if (isFound){
+
+            map.SetColor(coords, new Color(0, 0, 1, 1));
+        }
+    }
 
 }
