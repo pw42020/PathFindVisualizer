@@ -2,13 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
-using MS.Internal;
 
 public class Dijkstra : MonoBehaviour
 {
     private MapManager mapManager;
 
-    private PriorityQueue<TileBase> pQ;
+    //private PriorityQueue<Vector3Int,float> pQ = new PriorityQueue<Vector3Int,float>();
     
     [SerializeField]
     private Tilemap map;
@@ -16,14 +15,11 @@ public class Dijkstra : MonoBehaviour
     private void Awake()
     {
         mapManager = FindObjectOfType<MapManager>();
+        Debug.Log(mapManager.tiles.Count);
     }
 
     void startAlgorithm()
     {
-        foreach(var tile in mapManager.neighbors)
-        {
-            //pq.Push(tile);
-        }
 
     }
 }

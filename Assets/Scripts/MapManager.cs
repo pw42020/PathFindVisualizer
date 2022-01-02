@@ -9,7 +9,7 @@ public class MapManager : MonoBehaviour
     [SerializeField]
     private Tilemap map;
 
-    public Dictionary<Vector3Int,List<Vector3Int>> neighbors = new Dictionary<Vector3Int,List<Vector3Int>>();
+    public Dictionary<Vector3Int,TileScript> tiles = new Dictionary<Vector3Int,TileScript>();
 
     public Vector3Int start = new Vector3Int();
 
@@ -23,31 +23,33 @@ public class MapManager : MonoBehaviour
 
                 // adding every tile and its four neighbors to a dictionary at Start
                 Vector3Int t = new Vector3Int(x, y, 0);
-                List<Vector3Int> temp = new List<Vector3Int>();
+
+                TileScript temp = new TileScript(); // creating new TileScript to hold all info necessary for Dijkstra
+                temp.coords = t;
 
                 //Applying for fringe cases where x+-1, y+-1 is outside of border
 
                 if (x-1 >= (int) map.localBounds.min.x){
 
-                    temp.Add(new Vector3Int(x-1, y, 0));
+                    temp.neighbors.Add(new Vector3Int(x-1, y, 0));
                 }
 
                 if (x+1 <= map.localBounds.max.x){
 
-                    temp.Add(new Vector3Int(x+1, y, 0));
+                    temp.neighbors.Add(new Vector3Int(x+1, y, 0));
                 }
                 
                 if (y-1 >= (int) map.localBounds.max.y){
 
-                    temp.Add(new Vector3Int(x, y-1, 0));
+                    temp.neighbors.Add(new Vector3Int(x, y-1, 0));
                 }
                 
                 if (y+1 <= map.localBounds.max.y){
 
-                    temp.Add(new Vector3Int(x, y+1, 0));
+                    temp.neighbors.Add(new Vector3Int(x, y+1, 0));
                 }
 
-                neighbors.Add(t,temp); // Adding tile and its four neighbors to neighbors Dictionary
+                tiles.Add(t,temp);
             }
         }
     }
