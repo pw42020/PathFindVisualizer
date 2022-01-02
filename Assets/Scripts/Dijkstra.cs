@@ -1,18 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
+using MS.Internal;
 
 public class Dijkstra : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private MapManager mapManager;
+
+    private PriorityQueue<TileBase> pQ;
+    
+    [SerializeField]
+    private Tilemap map;
+
+    private void Awake()
     {
-        
+        mapManager = FindObjectOfType<MapManager>();
     }
 
-    // Update is called once per frame
-    void Update()
+    void startAlgorithm()
     {
-        
+        foreach(var tile in mapManager.neighbors)
+        {
+            //pq.Push(tile);
+        }
+
     }
 }
