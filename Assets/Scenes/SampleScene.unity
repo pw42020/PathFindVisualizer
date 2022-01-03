@@ -15522,7 +15522,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b21324a6a599e014c9f851fe0b8bd121, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraSpeed: 2
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -15830,11 +15829,11 @@ RectTransform:
   m_Father: {fileID: 2112069295}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 609.0502, y: 294.12744}
-  m_SizeDelta: {x: 279.1606, y: 89.9339}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -37, y: -34}
+  m_SizeDelta: {x: 279.16064, y: 89.9339}
+  m_Pivot: {x: 1, y: 1}
 --- !u!114 &1455948391
 MonoBehaviour:
   m_ObjectHideFlags: 0

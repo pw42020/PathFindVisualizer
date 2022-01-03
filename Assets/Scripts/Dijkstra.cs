@@ -32,13 +32,15 @@ public class Dijkstra : MonoBehaviour
             List<Vector3Int> neighbors = mapManager.tiles[currentVert].neighbors;
 
             foreach (Vector3Int nextVert in neighbors){
-
+                
+                Debug.Log($"{mapManager.tiles[currentVert].distance} | {mapManager.tiles[currentVert].weight}");
                 float newDist = mapManager.tiles[currentVert].distance + mapManager.tiles[currentVert].weight;
 
                 if (newDist < mapManager.tiles[nextVert].distance){
-
+                    
                     mapManager.tiles[nextVert].distance = newDist;
                     mapManager.tiles[nextVert].pred = currentVert;
+                    Debug.Log(mapManager.tiles[nextVert].distance);
 
                     if (nextVert == mapManager.finish){ // finish has been found, stop while loop
 
@@ -67,7 +69,7 @@ public class PriorityQueue
 
             heapList.Add((item.Value.distance, item.Key));
         }
-        int i = currentSize / 2;
+        int i = (int) currentSize / 2;
 
         while (i > 0){
 
@@ -80,8 +82,8 @@ public class PriorityQueue
     public void percDown(int i){
 
         while (i*2 <= currentSize){
-
-            var mc = minChild(i);
+            
+            int mc = minChild(i);
             
             if (heapList[i].Item1 > heapList[mc].Item1){
                 var temp = heapList[i];
@@ -89,7 +91,9 @@ public class PriorityQueue
                 heapList[mc] = temp;
 
             } // if statement
+
             i = mc;
+            
         } // while statement
 
     } // percDown()
