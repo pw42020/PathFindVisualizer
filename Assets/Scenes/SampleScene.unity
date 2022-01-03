@@ -15483,6 +15483,11 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &443041071 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8064900129457940309, guid: 2d27e9c96d6ea794f9fb0c0edf380a8b, type: 3}
+  m_PrefabInstance: {fileID: 1293383951}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -15522,6 +15527,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b21324a6a599e014c9f851fe0b8bd121, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mapManager: {fileID: 1005018122}
+  start: {fileID: 443041071}
+  finish: {fileID: 1625929263}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -15686,50 +15694,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d27e9c96d6ea794f9fb0c0edf380a8b, type: 3}
---- !u!1 &1369083895
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1369083897}
-  - component: {fileID: 1369083896}
-  m_Layer: 0
-  m_Name: Dijkstra
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1369083896
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1369083895}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24f485402d90e5448b6fc407da7652a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  map: {fileID: 340328283}
---- !u!4 &1369083897
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1369083895}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 733.6006, y: 322.29523, z: -43.323666}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1380338671
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15878,9 +15842,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1369083896}
+      - m_Target: {fileID: 1977906326}
         m_TargetAssemblyTypeName: Dijkstra, Assembly-CSharp
-        m_MethodName: startAlgorithm
+        m_MethodName: go
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -15994,6 +15958,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1625929263 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 96683940526034744, guid: 728a47a0e774ddd4abdeea6a8ad4b9d2, type: 3}
+  m_PrefabInstance: {fileID: 1380338671}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1760596938
 GameObject:
   m_ObjectHideFlags: 0
@@ -16037,6 +16006,50 @@ Transform:
   - {fileID: 340328281}
   m_Father: {fileID: 0}
   m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1977906325
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1977906327}
+  - component: {fileID: 1977906326}
+  m_Layer: 0
+  m_Name: Dijkstra
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1977906326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1977906325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24f485402d90e5448b6fc407da7652a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  map: {fileID: 340328283}
+--- !u!4 &1977906327
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1977906325}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 611.5258, y: 217.99492, z: -57.215508}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2112069291
 GameObject:

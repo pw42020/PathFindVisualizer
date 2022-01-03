@@ -4,28 +4,81 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
+    [SerializeField]
+    private MapManager mapManager;
+
+    private Vector3 initPosR = new Vector3();
+    private Vector3 newPosR = new Vector3();
 
     private Vector3 initPos = new Vector3();
     private Vector3 newPos = new Vector3();
 
+
+    public GameObject start;
+    public GameObject finish;
+
+    private void Awake()
+    {
+        mapManager = FindObjectOfType<MapManager>();
+
+    }
+
     void Update()
     {
 
-        if(Input.GetMouseButtonDown(1)){ // getting initial mouse point
+        if(Input.GetMouseButtonDown(1)) { // getting initial mouse point
             
-            initPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            initPosR = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         }
-
+        
         if(Input.GetMouseButton(1)){ // getting new mouse point
 
-            newPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            newPosR = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            transform.position += initPosR - newPosR; // moving camera amount mouse has moved
         }
-        if(!Input.GetMouseButton(1)){ // make it stop after user stops holding down
+
+        if(Input.GetMouseButtonUp(1)){ // make it stop after user stops holding down
+
+            initPosR = new Vector3(0, 0, 0);
+            newPosR = new Vector3(0, 0, 0);
+        }
+        
+        if(Input.GetMouseButtonDown(0)){
+        
+            if(Vector3Int.RoundToInt(Camera.main.ScreenToWorldPoint(Input.mousePosition) - new Vector3(0.5f, 0.5f, -1))
+                 == mapManager.start){
+                
+                initPos = mapManager.start;
+
+            }// if near start
+
+            if(Vector3Int.RoundToInt(Camera.main.ScreenToWorldPoint(Input.mousePosition) - new Vector3(0.5f, 0.5f, -1))
+                 == mapManager.finish){
+                
+                initPos = mapManager.finish;
+                
+            }// if near finish
+
+        }// if pressed mousebutton(0)
+
+        if(Input.GetMouseButton(0)){
+
+            newPos = Camera.main.ScreenToWorldPoint(Input.mousePosition) - new Vector3(0, 0, -1);
+
+            if(initPos == mapManager.finish){
+
+                finish.GetComponent<Transform>().position += initPos - newPos + new Vector3(0.5f, 0.5f, 0);
+            }
+            if(initPos == mapManager.start){
+
+                start.GetComponent<Transform>().position += initPos - newPos + new Vector3(0.5f, 0.5f, 0);
+            }
+        }
+
+        if(!Input.GetMouseButton(0)){
 
             initPos = new Vector3(0, 0, 0);
             newPos = new Vector3(0, 0, 0);
         }
-        
-        transform.position += initPos - newPos; // moving camera amount mouse has moved
-    }
-}
+    }// void Update
+}// class CameraMovement

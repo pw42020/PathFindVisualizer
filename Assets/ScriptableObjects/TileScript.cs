@@ -17,13 +17,4 @@ public class TileScript
     public Vector3Int coords = new Vector3Int();
     public Vector3Int pred = new Vector3Int();
 
-    void Update()
-    {
-
-        if (isFound){
-
-            map.SetColor(coords, new Color(0, 0, 1, 1));
-        }
-    }
-
 }

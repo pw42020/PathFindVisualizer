@@ -94,4 +94,10 @@ public class MapManager : MonoBehaviour
         finish = coords;
 
     }
+    
+    public void isFound(Vector3Int coords)
+    {
+        map.SetColor(coords, new Color(0, 0, 1, 1));
+
+    }
 }

@@ -9,8 +9,6 @@ public class Dijkstra : MonoBehaviour
     
     [SerializeField]
     private PriorityQueue pq = new PriorityQueue();
-
-    //private PriorityQueue<Vector3Int,float> pQ = new PriorityQueue<Vector3Int,float>();
     
     [SerializeField]
     private Tilemap map;
@@ -20,33 +18,42 @@ public class Dijkstra : MonoBehaviour
         mapManager = FindObjectOfType<MapManager>();
     }
 
-    public void startAlgorithm() // Dijkstra's Algorithm
+    public void go()
+    {
+        StartCoroutine(startAlgorithm());
+
+    }
+
+    public IEnumerator startAlgorithm() // Dijkstra's Algorithm
     {
         mapManager.tiles[mapManager.start].distance = 0;
         pq.buildHeap(mapManager.tiles);
 
-        while (!pq.isEmpty()){
+        bool breakFlag = false; // function exits when either pq is empty or when finish has been found
+        while (!breakFlag && !pq.isEmpty()){
 
             Vector3Int currentVert = pq.delMin();
-            mapManager.tiles[currentVert].isFound = true; // letting tile know it's been found
-            List<Vector3Int> neighbors = mapManager.tiles[currentVert].neighbors;
 
-            foreach (Vector3Int nextVert in neighbors){
+            yield return new WaitForSeconds(0.003f);
+
+            foreach (Vector3Int nextVert in mapManager.tiles[currentVert].neighbors){
                 
-                Debug.Log($"{mapManager.tiles[currentVert].distance} | {mapManager.tiles[currentVert].weight}");
-                float newDist = mapManager.tiles[currentVert].distance + mapManager.tiles[currentVert].weight;
+                float newDist = mapManager.tiles[currentVert].distance + mapManager.tiles[currentVert].weight; // finding new distance
 
-                if (newDist < mapManager.tiles[nextVert].distance){
+                if (newDist < mapManager.tiles[nextVert].distance){ // if new distance is less than old distance
+
+                    map.SetTileFlags(nextVert,TileFlags.None); // turns color of tile blue
+                    map.SetColor(nextVert, new Color(0, 0, 1, 1));
                     
                     mapManager.tiles[nextVert].distance = newDist;
                     mapManager.tiles[nextVert].pred = currentVert;
-                    Debug.Log(mapManager.tiles[nextVert].distance);
+                    pq.decreaseKey(nextVert, mapManager.tiles[nextVert].distance); // resetting Priority Queue
 
                     if (nextVert == mapManager.finish){ // finish has been found, stop while loop
 
                         Debug.Log($"{mapManager.finish} | {nextVert}");
 
-                        break;
+                        breakFlag = true;
 
                     } // if nextVert
                 } // if newDist
@@ -61,7 +68,7 @@ public class PriorityQueue
     private List<(float, Vector3Int)> heapList = new List<(float, Vector3Int)>();
     private int currentSize = 0;
 
-    public void buildHeap(Dictionary<Vector3Int,TileScript> dict)
+    public void buildHeap(Dictionary<Vector3Int,TileScript> dict) // builds heapList
     {
         currentSize = dict.Count;
 
@@ -79,7 +86,7 @@ public class PriorityQueue
 
     } // buildHeap()
 
-    public void percDown(int i){
+    public void percDown(int i){ // mini sort 
 
         while (i*2 <= currentSize){
             
@@ -112,7 +119,7 @@ public class PriorityQueue
         }
     }
 
-    public int minChild(int i){
+    public int minChild(int i){ // returns index of min child
 
         if (i*2 > currentSize){
             return -1;
@@ -135,7 +142,7 @@ public class PriorityQueue
         }
     } // minChild()
 
-    public Vector3Int delMin(){
+    public Vector3Int delMin(){ // removes minChild Vector3Int
 
         var retval = heapList[1].Item2;
         heapList[1] = heapList[currentSize];
@@ -147,7 +154,7 @@ public class PriorityQueue
         return retval;
     } // delMin()
 
-    public bool isEmpty(){
+    public bool isEmpty(){ // returns true or false whether or not heapList is empty
 
         if (currentSize == 0){
             return true;
@@ -157,7 +164,7 @@ public class PriorityQueue
         }
     } // isEmpty()
 
-    public void decreaseKey(Vector3Int val, float amt){
+    public void decreaseKey(Vector3Int val, float amt){ // changes key to its new updated amount
 
         bool done = false;
         int i = 1;

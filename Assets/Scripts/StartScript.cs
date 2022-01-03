@@ -12,7 +12,6 @@ public class StartScript : MonoBehaviour
         mapManager = FindObjectOfType<MapManager>();
     }
 
-    // Update is called once per frame
     private void Update()
     {
         Vector3Int coords = Vector3Int.RoundToInt(GetComponent<Transform>().position);
