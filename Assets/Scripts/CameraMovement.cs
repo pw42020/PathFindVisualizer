@@ -17,6 +17,8 @@ public class CameraMovement : MonoBehaviour
     public GameObject start;
     public GameObject finish;
 
+    private string func = null; // string that chooses what function is used 
+
     private void Awake()
     {
         mapManager = FindObjectOfType<MapManager>();
@@ -25,6 +27,7 @@ public class CameraMovement : MonoBehaviour
 
     void Update()
     {
+        // CAMERA SCROLLING BEGIN
 
         if(Input.GetMouseButtonDown(1)) { // getting initial mouse point
             
@@ -42,36 +45,40 @@ public class CameraMovement : MonoBehaviour
             initPosR = new Vector3(0, 0, 0);
             newPosR = new Vector3(0, 0, 0);
         }
+
+        // CAMERA SCROLLING END
+
+        // FLAG MOVING BEGIN
         
         if(Input.GetMouseButtonDown(0)){
         
             if(Vector3Int.RoundToInt(Camera.main.ScreenToWorldPoint(Input.mousePosition) - new Vector3(0.5f, 0.5f, -1))
                  == mapManager.start){
                 
-                initPos = mapManager.start;
+                func = "start";
 
-            }// if near start
+            }// if left click on start
 
             if(Vector3Int.RoundToInt(Camera.main.ScreenToWorldPoint(Input.mousePosition) - new Vector3(0.5f, 0.5f, -1))
                  == mapManager.finish){
                 
-                initPos = mapManager.finish;
+                func = "finish";
                 
-            }// if near finish
+            }// if left click on finish
 
         }// if pressed mousebutton(0)
 
         if(Input.GetMouseButton(0)){
 
-            newPos = Camera.main.ScreenToWorldPoint(Input.mousePosition) - new Vector3(0, 0, -1);
+            newPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-            if(initPos == mapManager.finish){
+            if(func == "finish"){
 
-                finish.GetComponent<Transform>().position += initPos - newPos + new Vector3(0.5f, 0.5f, 0);
+                finish.GetComponent<Transform>().position = newPos + new Vector3(0, 0, 1);
             }
-            if(initPos == mapManager.start){
+            if(func == "start"){
 
-                start.GetComponent<Transform>().position += initPos - newPos + new Vector3(0.5f, 0.5f, 0);
+                start.GetComponent<Transform>().position = newPos + new Vector3(0, 0, 1);
             }
         }
 
@@ -79,6 +86,11 @@ public class CameraMovement : MonoBehaviour
 
             initPos = new Vector3(0, 0, 0);
             newPos = new Vector3(0, 0, 0);
+
+            func = null;
         }
+
+        // FLAG MOVING END
+
     }// void Update
 }// class CameraMovement

@@ -14,8 +14,13 @@ public class StartScript : MonoBehaviour
 
     private void Update()
     {
-        Vector3Int coords = Vector3Int.RoundToInt(GetComponent<Transform>().position);
+        Vector3 coords = GetComponent<Transform>().position;
 
-        mapManager.setStart(coords);
+        mapManager.setStart(Vector3Int.RoundToInt(coords - new Vector3(0.5f, 0.5f, 0)));
+
+        if (Input.GetMouseButtonUp(0)){ // snapping function
+
+            GetComponent<Transform>().position = Vector3Int.RoundToInt(coords - new Vector3(0.5f, 0.5f, 0)) + new Vector3(0.5f, 0.5f, 0);
+        }
     }
 }
