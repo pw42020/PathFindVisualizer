@@ -13,6 +13,7 @@ public class CameraMovement : MonoBehaviour
     private Vector3 initPos = new Vector3();
     private Vector3 newPos = new Vector3();
 
+    private float sensitivity = 10f;
 
     public GameObject start;
     public GameObject finish;
@@ -27,8 +28,27 @@ public class CameraMovement : MonoBehaviour
 
     void Update()
     {
-        // CAMERA SCROLLING BEGIN
+        leftClick();
+        rightClick();
+        zoom();
 
+
+
+    }// void Update
+
+    private void zoom()
+    {
+        float zoom = GetComponent<Camera>().orthographicSize;
+
+        zoom += -Input.GetAxis("Mouse ScrollWheel")*sensitivity; // negative as I want scroll down to zoom out
+
+        zoom = Mathf.Clamp(zoom, 3f, 50f);
+        GetComponent<Camera>().orthographicSize = zoom;
+
+    }
+
+    private void rightClick() // function for moving camera
+    {
         if(Input.GetMouseButtonDown(1)) { // getting initial mouse point
             
             initPosR = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -46,10 +66,10 @@ public class CameraMovement : MonoBehaviour
             newPosR = new Vector3(0, 0, 0);
         }
 
-        // CAMERA SCROLLING END
+    } // rightClick
 
-        // FLAG MOVING BEGIN
-        
+    private void leftClick() // function for moving flags
+    {
         if(Input.GetMouseButtonDown(0)){
         
             if(Vector3Int.RoundToInt(Camera.main.ScreenToWorldPoint(Input.mousePosition) - new Vector3(0.5f, 0.5f, -1))
@@ -89,8 +109,7 @@ public class CameraMovement : MonoBehaviour
 
             func = null;
         }
+        
+    } // leftClick
 
-        // FLAG MOVING END
-
-    }// void Update
 }// class CameraMovement

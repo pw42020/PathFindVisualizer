@@ -9,6 +9,9 @@ public class MapManager : MonoBehaviour
     [SerializeField]
     private Tilemap map;
 
+    [SerializeField]
+    private Dijkstra dijkstra;
+
     public Dictionary<Vector3Int,TileScript> tiles = new Dictionary<Vector3Int,TileScript>();
 
     public Vector3Int start = new Vector3Int();

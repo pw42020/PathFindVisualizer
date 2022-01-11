@@ -13,7 +13,7 @@ public class TileScript
 
     public float weight = 1;
     public float distance = float.PositiveInfinity;
-    public bool isWall, isFound;
+    public bool isWall, isFound, isPath;
     public Vector3Int coords = new Vector3Int();
     public Vector3Int pred = new Vector3Int();
 

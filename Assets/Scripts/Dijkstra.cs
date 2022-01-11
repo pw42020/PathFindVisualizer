@@ -9,6 +9,8 @@ public class Dijkstra : MonoBehaviour
     
     [SerializeField]
     private PriorityQueue pq = new PriorityQueue();
+
+    public float speed;
     
     [SerializeField]
     private Tilemap map;
@@ -18,23 +20,18 @@ public class Dijkstra : MonoBehaviour
         mapManager = FindObjectOfType<MapManager>();
     }
 
-    public void go()
-    {
-        StartCoroutine(startAlgorithm());
-
-    }
-
     public IEnumerator startAlgorithm() // Dijkstra's Algorithm
     {
         mapManager.tiles[mapManager.start].distance = 0;
         pq.buildHeap(mapManager.tiles);
+        pq.buildHeap(mapManager.tiles); // doubling stops error from having to press play button twice? hopefully will find better fix later
 
         bool breakFlag = false; // function exits when either pq is empty or when finish has been found
         while (!breakFlag && !pq.isEmpty()){
 
             Vector3Int currentVert = pq.delMin();
 
-            yield return new WaitForSeconds(0.003f);
+            yield return new WaitForSeconds(1/speed);
 
             foreach (Vector3Int nextVert in mapManager.tiles[currentVert].neighbors){
                 
@@ -42,9 +39,12 @@ public class Dijkstra : MonoBehaviour
 
                 if (newDist < mapManager.tiles[nextVert].distance){ // if new distance is less than old distance
 
-                    map.SetTileFlags(nextVert,TileFlags.None); // turns color of tile blue
-                    map.SetColor(nextVert, new Color(0, 0, 1, 1));
-                    
+                    if (!mapManager.tiles[nextVert].isWall){ // keeps color of walls gray
+
+                        map.SetTileFlags(nextVert,TileFlags.None); // turns color of tile blue
+                        map.SetColor(nextVert, new Color(0, 0, 1, 1));
+                    }
+
                     mapManager.tiles[nextVert].distance = newDist;
                     mapManager.tiles[nextVert].pred = currentVert;
                     pq.decreaseKey(nextVert, mapManager.tiles[nextVert].distance); // resetting Priority Queue
@@ -59,30 +59,57 @@ public class Dijkstra : MonoBehaviour
                 } // if newDist
             } // foreach
         } // while !pq.isEmpty
+        
+        pq.heapList = new List<(float, Vector3Int)>(); // resetting list
+
+        // getting shortest path from start to finish
+        Vector3Int vert = mapManager.finish;
+
+        List<Vector3Int> predList = new List<Vector3Int>();
+        while(vert != mapManager.start){
+            
+            predList.Add(vert);
+            mapManager.tiles[vert].isPath = true; // making it so it only takes O(n) time to visualize tilepath
+                                                // O(n) to change blue --> white, hash to see if you need to keep it blue
+            vert = mapManager.tiles[vert].pred;
+            
+        }
+
+        foreach(Vector3Int coords in mapManager.tiles.Keys){
+            
+            // changing all tiles to white if they're not part of the path or a wall
+            if (!mapManager.tiles[coords].isPath && !mapManager.tiles[coords].isWall){
+
+                map.SetTileFlags(coords, TileFlags.None);
+                map.SetColor(coords, new Color(1, 1, 1, 1));
+            }
+        }
+
     } // startAlgorithm()
 }
 
 // PriorityQueue class used from ECE241 lectures converted to C#
 public class PriorityQueue
 {
-    private List<(float, Vector3Int)> heapList = new List<(float, Vector3Int)>();
+    public List<(float, Vector3Int)> heapList = new List<(float, Vector3Int)>();
     private int currentSize = 0;
 
     public void buildHeap(Dictionary<Vector3Int,TileScript> dict) // builds heapList
     {
-        currentSize = dict.Count;
 
         foreach (var item in dict){
 
             heapList.Add((item.Value.distance, item.Key));
         }
-        int i = (int) currentSize / 2;
+        int i = (int) (currentSize / 2) - 1;
+        
 
         while (i > 0){
 
             percDown(i);
             i = i - 1;
         }
+        currentSize = dict.Count;
 
     } // buildHeap()
 
@@ -122,18 +149,21 @@ public class PriorityQueue
     public int minChild(int i){ // returns index of min child
 
         if (i*2 > currentSize){
+
             return -1;
         }
         else{
             if(i*2 + 1 > currentSize){
-
+                
                 return i*2;
             }
             else{
                 if(heapList[i*2].Item1 < heapList[i*2 + 1].Item1){
+                    
                     return i*2;
                 }
                 else{
+                    
                     return i*2 + 1;
                 }
 
