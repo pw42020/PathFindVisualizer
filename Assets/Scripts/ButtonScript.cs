@@ -21,11 +21,6 @@ public class ButtonScript : MonoBehaviour
     private bool turnWall = false;
     private bool hasReset = true;
 
-    private void Awake()
-    {
-        text.text = "Speed: " + slider.value;
-    }
-
     public void wallSelectButton()
     {
         turnWall = !turnWall;
