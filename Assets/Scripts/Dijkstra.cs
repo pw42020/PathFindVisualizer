@@ -23,6 +23,8 @@ public class Dijkstra : MonoBehaviour
     public IEnumerator startAlgorithm() // Dijkstra's Algorithm
     {
         mapManager.tiles[mapManager.start].distance = 0;
+        float dist = mapManager.tiles[mapManager.start].distance;
+
         pq.buildHeap(mapManager.tiles);
         pq.buildHeap(mapManager.tiles); // doubling stops error from having to press play button twice? hopefully will find better fix later
 
@@ -31,7 +33,13 @@ public class Dijkstra : MonoBehaviour
 
             Vector3Int currentVert = pq.delMin();
 
-            yield return new WaitForSeconds(1/speed);
+
+            // pauses Dijkstra ONLY IF the distance from start is new. So now all tiles on the same radius won't pause
+            // but if the new radius is found it pauses
+            if (mapManager.tiles[currentVert].distance != dist){ // better system of pausing Dijkstra
+                dist = mapManager.tiles[currentVert].distance;
+                yield return new WaitForSeconds(1/speed);
+            }
 
             foreach (Vector3Int nextVert in mapManager.tiles[currentVert].neighbors){
                 

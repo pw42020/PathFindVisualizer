@@ -79,6 +79,7 @@ public class MapManager : MonoBehaviour
 
         map.SetTileFlags(coords, TileFlags.None); // allowing coords tile to be change color
         map.SetColor(coords, new Color (1, 0, 0, 1)); // changing color to red
+        //tiles[coords].isWall = false; // reverting from wall so flag won't get stuck
 
         start = coords;
 
@@ -93,6 +94,7 @@ public class MapManager : MonoBehaviour
 
         map.SetTileFlags(coords, TileFlags.None); // allowing coords tile to be change color
         map.SetColor(coords, new Color (0, 1, 0, 1)); // changing color to red
+        //tiles[coords].isWall = false; // reverting from wall so flag won't get found
 
         finish = coords;
 

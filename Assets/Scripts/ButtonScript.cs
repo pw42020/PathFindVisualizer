@@ -20,19 +20,34 @@ public class ButtonScript : MonoBehaviour
 
     private bool turnWall = false;
     private bool hasReset = true;
+    private bool erase = false;
+
+    void Start()
+    {
+        dijkstra.speed = 30;
+    }
 
     public void wallSelectButton()
     {
+        erase = false;
         turnWall = !turnWall;
         Debug.Log($"Can turn tiles to walls: {turnWall}");
-    } // OnButtonPress()
+
+    } // wallSelectButton()
+
+    public void eraseButton()
+    {
+        turnWall = false;
+        erase = !erase;
+        Debug.Log($"Can erase walls: {erase}");
+    } // eraseButton()
 
     public void moveSlider()
     {
         text.text = "Speed: " + slider.value;
-        dijkstra.speed = slider.value;
+        dijkstra.speed = slider.value*30;
 
-    }
+    } // moveSlider()
 
     void Update()
     {
@@ -40,11 +55,27 @@ public class ButtonScript : MonoBehaviour
 
             Vector3 coords = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-            changeToWall(Vector3Int.RoundToInt(coords + new Vector3(0, 0, 1)));
+            changeToWall(Vector3Int.RoundToInt(coords + new Vector3(-0.5f, -0.5f, 1))); // new Vector3() is to get it to Round to correct tile
         } // if turnWall
 
+        if(Input.GetMouseButton(0) && erase){
+
+            Vector3 coords = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+            eraseWall(Vector3Int.RoundToInt(coords + new Vector3(-0.5f, -0.5f, 1))); // new Vector3() is to get it to Round to correct tile
+        } // if erase
 
     } // void Update()
+
+    void eraseWall(Vector3Int coords)
+    {
+        mapManager.tiles[coords].isWall = false;
+        mapManager.tiles[coords].weight = 1f;
+
+        map.SetTileFlags(coords, TileFlags.None); // allowing coords tile to be change color
+        map.SetColor(coords, new Color(1, 1, 1, 1)); // changing color to white
+
+    }
 
     void changeToWall(Vector3Int coords)
     {
@@ -71,7 +102,7 @@ public class ButtonScript : MonoBehaviour
 
         }
         hasReset = true;
-    } // reset()
+    } // resetButton()
 
     public void playButton()
     {
@@ -80,5 +111,5 @@ public class ButtonScript : MonoBehaviour
             hasReset = false;
         }
         
-    } // go()
+    } // playButton()
 }
