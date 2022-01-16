@@ -212,6 +212,7 @@ IL2CPP_EXTERN_C RuntimeClass* TileScript_t6E723D639E7213BAEA1F8346F4052656651936
 IL2CPP_EXTERN_C RuntimeClass* U3CstartAlgorithmU3Ed__5_tA988FA419BD3EA9C1693404B990310D054E2CBC2_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* WaitForSeconds_t8F9189BE6E467C98C99177038881F8982E0E4013_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C String_t* _stringLiteral171C4980CEDD496590EA02D7A9FA3D5825D2797B;
 IL2CPP_EXTERN_C String_t* _stringLiteral2AD47C03F7A83F82E3B2ADFE8A60F1727FD3BEFD;
 IL2CPP_EXTERN_C String_t* _stringLiteral5AC9E039324DDB82B6801B1846C1987DF1F4AFCC;
 IL2CPP_EXTERN_C String_t* _stringLiteral5C902504D3B71DE57ED2DC2422E12B512328ED13;
@@ -2520,10 +2521,12 @@ public:
 	RuntimeObject * ___U3CU3E2__current_1;
 	// Dijkstra Dijkstra/<startAlgorithm>d__5::<>4__this
 	Dijkstra_tA9804A39572A0E3EE1DCDD489B16C15AFF294817 * ___U3CU3E4__this_2;
-	// System.Boolean Dijkstra/<startAlgorithm>d__5::<breakFlag>5__2
-	bool ___U3CbreakFlagU3E5__2_3;
-	// UnityEngine.Vector3Int Dijkstra/<startAlgorithm>d__5::<currentVert>5__3
-	Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  ___U3CcurrentVertU3E5__3_4;
+	// System.Single Dijkstra/<startAlgorithm>d__5::<dist>5__2
+	float ___U3CdistU3E5__2_3;
+	// System.Boolean Dijkstra/<startAlgorithm>d__5::<breakFlag>5__3
+	bool ___U3CbreakFlagU3E5__3_4;
+	// UnityEngine.Vector3Int Dijkstra/<startAlgorithm>d__5::<currentVert>5__4
+	Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  ___U3CcurrentVertU3E5__4_5;
 
 public:
 	inline static int32_t get_offset_of_U3CU3E1__state_0() { return static_cast<int32_t>(offsetof(U3CstartAlgorithmU3Ed__5_tA988FA419BD3EA9C1693404B990310D054E2CBC2, ___U3CU3E1__state_0)); }
@@ -2552,20 +2555,28 @@ public:
 		Il2CppCodeGenWriteBarrier((void**)(&___U3CU3E4__this_2), (void*)value);
 	}
 
-	inline static int32_t get_offset_of_U3CbreakFlagU3E5__2_3() { return static_cast<int32_t>(offsetof(U3CstartAlgorithmU3Ed__5_tA988FA419BD3EA9C1693404B990310D054E2CBC2, ___U3CbreakFlagU3E5__2_3)); }
-	inline bool get_U3CbreakFlagU3E5__2_3() const { return ___U3CbreakFlagU3E5__2_3; }
-	inline bool* get_address_of_U3CbreakFlagU3E5__2_3() { return &___U3CbreakFlagU3E5__2_3; }
-	inline void set_U3CbreakFlagU3E5__2_3(bool value)
+	inline static int32_t get_offset_of_U3CdistU3E5__2_3() { return static_cast<int32_t>(offsetof(U3CstartAlgorithmU3Ed__5_tA988FA419BD3EA9C1693404B990310D054E2CBC2, ___U3CdistU3E5__2_3)); }
+	inline float get_U3CdistU3E5__2_3() const { return ___U3CdistU3E5__2_3; }
+	inline float* get_address_of_U3CdistU3E5__2_3() { return &___U3CdistU3E5__2_3; }
+	inline void set_U3CdistU3E5__2_3(float value)
 	{
-		___U3CbreakFlagU3E5__2_3 = value;
+		___U3CdistU3E5__2_3 = value;
 	}
 
-	inline static int32_t get_offset_of_U3CcurrentVertU3E5__3_4() { return static_cast<int32_t>(offsetof(U3CstartAlgorithmU3Ed__5_tA988FA419BD3EA9C1693404B990310D054E2CBC2, ___U3CcurrentVertU3E5__3_4)); }
-	inline Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  get_U3CcurrentVertU3E5__3_4() const { return ___U3CcurrentVertU3E5__3_4; }
-	inline Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA * get_address_of_U3CcurrentVertU3E5__3_4() { return &___U3CcurrentVertU3E5__3_4; }
-	inline void set_U3CcurrentVertU3E5__3_4(Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  value)
+	inline static int32_t get_offset_of_U3CbreakFlagU3E5__3_4() { return static_cast<int32_t>(offsetof(U3CstartAlgorithmU3Ed__5_tA988FA419BD3EA9C1693404B990310D054E2CBC2, ___U3CbreakFlagU3E5__3_4)); }
+	inline bool get_U3CbreakFlagU3E5__3_4() const { return ___U3CbreakFlagU3E5__3_4; }
+	inline bool* get_address_of_U3CbreakFlagU3E5__3_4() { return &___U3CbreakFlagU3E5__3_4; }
+	inline void set_U3CbreakFlagU3E5__3_4(bool value)
 	{
-		___U3CcurrentVertU3E5__3_4 = value;
+		___U3CbreakFlagU3E5__3_4 = value;
+	}
+
+	inline static int32_t get_offset_of_U3CcurrentVertU3E5__4_5() { return static_cast<int32_t>(offsetof(U3CstartAlgorithmU3Ed__5_tA988FA419BD3EA9C1693404B990310D054E2CBC2, ___U3CcurrentVertU3E5__4_5)); }
+	inline Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  get_U3CcurrentVertU3E5__4_5() const { return ___U3CcurrentVertU3E5__4_5; }
+	inline Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA * get_address_of_U3CcurrentVertU3E5__4_5() { return &___U3CcurrentVertU3E5__4_5; }
+	inline void set_U3CcurrentVertU3E5__4_5(Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  value)
+	{
+		___U3CcurrentVertU3E5__4_5 = value;
 	}
 };
 
@@ -3036,6 +3047,8 @@ public:
 	bool ___turnWall_9;
 	// System.Boolean ButtonScript::hasReset
 	bool ___hasReset_10;
+	// System.Boolean ButtonScript::erase
+	bool ___erase_11;
 
 public:
 	inline static int32_t get_offset_of_mapManager_4() { return static_cast<int32_t>(offsetof(ButtonScript_t70FEA91E13EC09A7DC9E25D1B821D76CBB2895E7, ___mapManager_4)); }
@@ -3097,6 +3110,14 @@ public:
 	inline void set_hasReset_10(bool value)
 	{
 		___hasReset_10 = value;
+	}
+
+	inline static int32_t get_offset_of_erase_11() { return static_cast<int32_t>(offsetof(ButtonScript_t70FEA91E13EC09A7DC9E25D1B821D76CBB2895E7, ___erase_11)); }
+	inline bool get_erase_11() const { return ___erase_11; }
+	inline bool* get_address_of_erase_11() { return &___erase_11; }
+	inline void set_erase_11(bool value)
+	{
+		___erase_11 = value;
 	}
 };
 
@@ -4595,6 +4616,8 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t65B972D6A585A0A5B63153CF
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  Vector3Int_RoundToInt_m5C5E7AF335B7F80B9CE6207319D5849CC6E2D80C_inline (Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  ___v0, const RuntimeMethod* method);
 // System.Void ButtonScript::changeToWall(UnityEngine.Vector3Int)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ButtonScript_changeToWall_m9CEAC6713DCCBFF8297475F0AD2F0F99304F7010 (ButtonScript_t70FEA91E13EC09A7DC9E25D1B821D76CBB2895E7 * __this, Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  ___coords0, const RuntimeMethod* method);
+// System.Void ButtonScript::eraseWall(UnityEngine.Vector3Int)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ButtonScript_eraseWall_mA245774ECD40BD301E82AE6A03077D3BA674EE30 (ButtonScript_t70FEA91E13EC09A7DC9E25D1B821D76CBB2895E7 * __this, Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  ___coords0, const RuntimeMethod* method);
 // !1 System.Collections.Generic.Dictionary`2<UnityEngine.Vector3Int,TileScript>::get_Item(!0)
 inline TileScript_t6E723D639E7213BAEA1F8346F405265665193642 * Dictionary_2_get_Item_mE363511C92A9A3D9742DDF72B542806FCCA52730 (Dictionary_2_t245E9FE36D93681DBF00922FDE124397B10C5B96 * __this, Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  ___key0, const RuntimeMethod* method)
 {
@@ -4933,6 +4956,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ThrowHelper_ThrowArgumentOutOfRangeExcep
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// System.Void ButtonScript::Start()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ButtonScript_Start_m667412D1B935EA027E49D2C8A4E3EA28C236D54C (ButtonScript_t70FEA91E13EC09A7DC9E25D1B821D76CBB2895E7 * __this, const RuntimeMethod* method)
+{
+	{
+		// dijkstra.speed = 30;
+		Dijkstra_tA9804A39572A0E3EE1DCDD489B16C15AFF294817 * L_0 = __this->get_dijkstra_6();
+		L_0->set_speed_6((30.0f));
+		// }
+		return;
+	}
+}
 // System.Void ButtonScript::wallSelectButton()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ButtonScript_wallSelectButton_mB7043D098AB037FE973F987433129DD5619DB1DB (ButtonScript_t70FEA91E13EC09A7DC9E25D1B821D76CBB2895E7 * __this, const RuntimeMethod* method)
 {
@@ -4945,6 +4979,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ButtonScript_wallSelectButton_mB7043D098
 		s_Il2CppMethodInitialized = true;
 	}
 	{
+		// erase = false;
+		__this->set_erase_11((bool)0);
 		// turnWall = !turnWall;
 		bool L_0 = __this->get_turnWall_9();
 		__this->set_turnWall_9((bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0));
@@ -4956,7 +4992,36 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ButtonScript_wallSelectButton_mB7043D098
 		L_4 = String_Format_mB3D38E5238C3164DB4D7D29339D9E225A4496D17(_stringLiteral5C902504D3B71DE57ED2DC2422E12B512328ED13, L_3, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(Debug_tEB68BCBEB8EFD60F8043C67146DC05E7F50F374B_il2cpp_TypeInfo_var);
 		Debug_Log_mC26E5AD0D8D156C7FFD173AA15827F69225E9DB8(L_4, /*hidden argument*/NULL);
-		// } // OnButtonPress()
+		// } // wallSelectButton()
+		return;
+	}
+}
+// System.Void ButtonScript::eraseButton()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ButtonScript_eraseButton_m74CBAB2B553C05C64D1D2B7D670FCA9F71B45167 (ButtonScript_t70FEA91E13EC09A7DC9E25D1B821D76CBB2895E7 * __this, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_tEB68BCBEB8EFD60F8043C67146DC05E7F50F374B_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral171C4980CEDD496590EA02D7A9FA3D5825D2797B);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// turnWall = false;
+		__this->set_turnWall_9((bool)0);
+		// erase = !erase;
+		bool L_0 = __this->get_erase_11();
+		__this->set_erase_11((bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0));
+		// Debug.Log($"Can erase walls: {erase}");
+		bool L_1 = __this->get_erase_11();
+		bool L_2 = L_1;
+		RuntimeObject * L_3 = Box(Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_il2cpp_TypeInfo_var, &L_2);
+		String_t* L_4;
+		L_4 = String_Format_mB3D38E5238C3164DB4D7D29339D9E225A4496D17(_stringLiteral171C4980CEDD496590EA02D7A9FA3D5825D2797B, L_3, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_tEB68BCBEB8EFD60F8043C67146DC05E7F50F374B_il2cpp_TypeInfo_var);
+		Debug_Log_mC26E5AD0D8D156C7FFD173AA15827F69225E9DB8(L_4, /*hidden argument*/NULL);
+		// } // eraseButton()
 		return;
 	}
 }
@@ -4982,13 +5047,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ButtonScript_moveSlider_m0551CCEAE66C24A
 		String_t* L_4;
 		L_4 = String_Concat_m4B4AB72618348C5DFBFBA8DED84B9E2EBDB55E1B(_stringLiteralE090C20B19D850ABD64F22A177D7A290F3FC082D, L_3, /*hidden argument*/NULL);
 		VirtActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_0, L_4);
-		// dijkstra.speed = slider.value;
+		// dijkstra.speed = slider.value*30;
 		Dijkstra_tA9804A39572A0E3EE1DCDD489B16C15AFF294817 * L_5 = __this->get_dijkstra_6();
 		Slider_tBF39A11CC24CBD3F8BD728982ACAEAE43989B51A * L_6 = __this->get_slider_8();
 		float L_7;
 		L_7 = VirtFuncInvoker0< float >::Invoke(46 /* System.Single UnityEngine.UI.Slider::get_value() */, L_6);
-		L_5->set_speed_6(L_7);
-		// }
+		L_5->set_speed_6(((float)il2cpp_codegen_multiply((float)L_7, (float)(30.0f))));
+		// } // moveSlider()
 		return;
 	}
 }
@@ -4997,6 +5062,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ButtonScript_Update_m97527E784DB58C2B6A4
 {
 	Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  V_0;
 	memset((&V_0), 0, sizeof(V_0));
+	Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  V_1;
+	memset((&V_1), 0, sizeof(V_1));
 	{
 		// if(Input.GetMouseButton(0) && turnWall){
 		bool L_0;
@@ -5022,11 +5089,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ButtonScript_Update_m97527E784DB58C2B6A4
 		Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  L_4;
 		L_4 = Camera_ScreenToWorldPoint_m7EE1C8665F9BB089581FA225BB4BFF411B5301B6(L_2, L_3, /*hidden argument*/NULL);
 		V_0 = L_4;
-		// changeToWall(Vector3Int.RoundToInt(coords + new Vector3(0, 0, 1)));
+		// changeToWall(Vector3Int.RoundToInt(coords + new Vector3(-0.5f, -0.5f, 1))); // new Vector3() is to get it to Round to correct tile
 		Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  L_5 = V_0;
 		Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  L_6;
 		memset((&L_6), 0, sizeof(L_6));
-		Vector3__ctor_m57495F692C6CE1CEF278CAD9A98221165D37E636_inline((&L_6), (0.0f), (0.0f), (1.0f), /*hidden argument*/NULL);
+		Vector3__ctor_m57495F692C6CE1CEF278CAD9A98221165D37E636_inline((&L_6), (-0.5f), (-0.5f), (1.0f), /*hidden argument*/NULL);
 		Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  L_7;
 		L_7 = Vector3_op_Addition_mEE4F672B923CCB184C39AABCA33443DB218E50E0_inline(L_5, L_6, /*hidden argument*/NULL);
 		Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_8;
@@ -5036,7 +5103,84 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ButtonScript_Update_m97527E784DB58C2B6A4
 
 IL_0045:
 	{
+		// if(Input.GetMouseButton(0) && erase){
+		bool L_9;
+		L_9 = Input_GetMouseButton_m27BF2DDBF38A38787B83A13D3E6F0F88F7C834C1(0, /*hidden argument*/NULL);
+		if (!L_9)
+		{
+			goto IL_008a;
+		}
+	}
+	{
+		bool L_10 = __this->get_erase_11();
+		if (!L_10)
+		{
+			goto IL_008a;
+		}
+	}
+	{
+		// Vector3 coords = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+		Camera_tC44E094BAB53AFC8A014C6F9CFCE11F4FC38006C * L_11;
+		L_11 = Camera_get_main_mC337C621B91591CEF89504C97EF64D717C12871C(/*hidden argument*/NULL);
+		Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  L_12;
+		L_12 = Input_get_mousePosition_m79528BC2F30C57054641F709C855130AE586AC0E(/*hidden argument*/NULL);
+		Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  L_13;
+		L_13 = Camera_ScreenToWorldPoint_m7EE1C8665F9BB089581FA225BB4BFF411B5301B6(L_11, L_12, /*hidden argument*/NULL);
+		V_1 = L_13;
+		// eraseWall(Vector3Int.RoundToInt(coords + new Vector3(-0.5f, -0.5f, 1))); // new Vector3() is to get it to Round to correct tile
+		Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  L_14 = V_1;
+		Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  L_15;
+		memset((&L_15), 0, sizeof(L_15));
+		Vector3__ctor_m57495F692C6CE1CEF278CAD9A98221165D37E636_inline((&L_15), (-0.5f), (-0.5f), (1.0f), /*hidden argument*/NULL);
+		Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  L_16;
+		L_16 = Vector3_op_Addition_mEE4F672B923CCB184C39AABCA33443DB218E50E0_inline(L_14, L_15, /*hidden argument*/NULL);
+		Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_17;
+		L_17 = Vector3Int_RoundToInt_m5C5E7AF335B7F80B9CE6207319D5849CC6E2D80C_inline(L_16, /*hidden argument*/NULL);
+		ButtonScript_eraseWall_mA245774ECD40BD301E82AE6A03077D3BA674EE30(__this, L_17, /*hidden argument*/NULL);
+	}
+
+IL_008a:
+	{
 		// } // void Update()
+		return;
+	}
+}
+// System.Void ButtonScript::eraseWall(UnityEngine.Vector3Int)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ButtonScript_eraseWall_mA245774ECD40BD301E82AE6A03077D3BA674EE30 (ButtonScript_t70FEA91E13EC09A7DC9E25D1B821D76CBB2895E7 * __this, Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  ___coords0, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_get_Item_mE363511C92A9A3D9742DDF72B542806FCCA52730_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// mapManager.tiles[coords].isWall = false;
+		MapManager_t4589A236B4CE205CE81E79FECBCD6B3F3F99F225 * L_0 = __this->get_mapManager_4();
+		Dictionary_2_t245E9FE36D93681DBF00922FDE124397B10C5B96 * L_1 = L_0->get_tiles_6();
+		Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_2 = ___coords0;
+		TileScript_t6E723D639E7213BAEA1F8346F405265665193642 * L_3;
+		L_3 = Dictionary_2_get_Item_mE363511C92A9A3D9742DDF72B542806FCCA52730(L_1, L_2, /*hidden argument*/Dictionary_2_get_Item_mE363511C92A9A3D9742DDF72B542806FCCA52730_RuntimeMethod_var);
+		L_3->set_isWall_4((bool)0);
+		// mapManager.tiles[coords].weight = 1f;
+		MapManager_t4589A236B4CE205CE81E79FECBCD6B3F3F99F225 * L_4 = __this->get_mapManager_4();
+		Dictionary_2_t245E9FE36D93681DBF00922FDE124397B10C5B96 * L_5 = L_4->get_tiles_6();
+		Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_6 = ___coords0;
+		TileScript_t6E723D639E7213BAEA1F8346F405265665193642 * L_7;
+		L_7 = Dictionary_2_get_Item_mE363511C92A9A3D9742DDF72B542806FCCA52730(L_5, L_6, /*hidden argument*/Dictionary_2_get_Item_mE363511C92A9A3D9742DDF72B542806FCCA52730_RuntimeMethod_var);
+		L_7->set_weight_2((1.0f));
+		// map.SetTileFlags(coords, TileFlags.None); // allowing coords tile to be change color
+		Tilemap_t0A1D80C1C0EDF8BDB0A2E274DC0826EF03642F31 * L_8 = __this->get_map_5();
+		Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_9 = ___coords0;
+		Tilemap_SetTileFlags_mC88DE5654C5FAB5CFBDD0CAD7ED500AD0B1033C2(L_8, L_9, 0, /*hidden argument*/NULL);
+		// map.SetColor(coords, new Color(1, 1, 1, 1)); // changing color to white
+		Tilemap_t0A1D80C1C0EDF8BDB0A2E274DC0826EF03642F31 * L_10 = __this->get_map_5();
+		Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_11 = ___coords0;
+		Color_tF40DAF76C04FFECF3FE6024F85A294741C9CC659  L_12;
+		memset((&L_12), 0, sizeof(L_12));
+		Color__ctor_m679019E6084BF7A6F82590F66F5F695F6A50ECC5((&L_12), (1.0f), (1.0f), (1.0f), (1.0f), /*hidden argument*/NULL);
+		Tilemap_SetColor_mC78B3CC9FFA5C5EB63D061FBBD047D24C13BEA81(L_10, L_11, L_12, /*hidden argument*/NULL);
+		// }
 		return;
 	}
 }
@@ -5228,7 +5372,7 @@ IL_00fb:
 	{
 		// hasReset = true;
 		__this->set_hasReset_10((bool)1);
-		// } // reset()
+		// } // resetButton()
 		return;
 	}
 }
@@ -5256,7 +5400,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ButtonScript_playButton_m28DC3ECE8FB69B4
 
 IL_0021:
 	{
-		// } // go()
+		// } // playButton()
 		return;
 	}
 }
@@ -7344,7 +7488,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CstartAlgorithmU3Ed__5_MoveNext_m204A7
 		int32_t L_3 = V_0;
 		if ((((int32_t)L_3) == ((int32_t)1)))
 		{
-			goto IL_00af;
+			goto IL_0119;
 		}
 	}
 	{
@@ -7364,424 +7508,463 @@ IL_001a:
 		TileScript_t6E723D639E7213BAEA1F8346F405265665193642 * L_10;
 		L_10 = Dictionary_2_get_Item_mE363511C92A9A3D9742DDF72B542806FCCA52730(L_6, L_9, /*hidden argument*/Dictionary_2_get_Item_mE363511C92A9A3D9742DDF72B542806FCCA52730_RuntimeMethod_var);
 		L_10->set_distance_3((0.0f));
-		// pq.buildHeap(mapManager.tiles);
+		// float dist = mapManager.tiles[mapManager.start].distance;
 		Dijkstra_tA9804A39572A0E3EE1DCDD489B16C15AFF294817 * L_11 = V_1;
-		PriorityQueue_tE9C3C922E642027E82C73544CC14DA8A0684BC6F * L_12 = L_11->get_pq_5();
-		Dijkstra_tA9804A39572A0E3EE1DCDD489B16C15AFF294817 * L_13 = V_1;
-		MapManager_t4589A236B4CE205CE81E79FECBCD6B3F3F99F225 * L_14 = L_13->get_mapManager_4();
-		Dictionary_2_t245E9FE36D93681DBF00922FDE124397B10C5B96 * L_15 = L_14->get_tiles_6();
-		PriorityQueue_buildHeap_mD33DCC3817E8DB51F27C6DB7CA746F0379803075(L_12, L_15, /*hidden argument*/NULL);
+		MapManager_t4589A236B4CE205CE81E79FECBCD6B3F3F99F225 * L_12 = L_11->get_mapManager_4();
+		Dictionary_2_t245E9FE36D93681DBF00922FDE124397B10C5B96 * L_13 = L_12->get_tiles_6();
+		Dijkstra_tA9804A39572A0E3EE1DCDD489B16C15AFF294817 * L_14 = V_1;
+		MapManager_t4589A236B4CE205CE81E79FECBCD6B3F3F99F225 * L_15 = L_14->get_mapManager_4();
+		Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_16 = L_15->get_start_7();
+		TileScript_t6E723D639E7213BAEA1F8346F405265665193642 * L_17;
+		L_17 = Dictionary_2_get_Item_mE363511C92A9A3D9742DDF72B542806FCCA52730(L_13, L_16, /*hidden argument*/Dictionary_2_get_Item_mE363511C92A9A3D9742DDF72B542806FCCA52730_RuntimeMethod_var);
+		float L_18 = L_17->get_distance_3();
+		__this->set_U3CdistU3E5__2_3(L_18);
+		// pq.buildHeap(mapManager.tiles);
+		Dijkstra_tA9804A39572A0E3EE1DCDD489B16C15AFF294817 * L_19 = V_1;
+		PriorityQueue_tE9C3C922E642027E82C73544CC14DA8A0684BC6F * L_20 = L_19->get_pq_5();
+		Dijkstra_tA9804A39572A0E3EE1DCDD489B16C15AFF294817 * L_21 = V_1;
+		MapManager_t4589A236B4CE205CE81E79FECBCD6B3F3F99F225 * L_22 = L_21->get_mapManager_4();
+		Dictionary_2_t245E9FE36D93681DBF00922FDE124397B10C5B96 * L_23 = L_22->get_tiles_6();
+		PriorityQueue_buildHeap_mD33DCC3817E8DB51F27C6DB7CA746F0379803075(L_20, L_23, /*hidden argument*/NULL);
 		// pq.buildHeap(mapManager.tiles); // doubling stops error from having to press play button twice? hopefully will find better fix later
-		Dijkstra_tA9804A39572A0E3EE1DCDD489B16C15AFF294817 * L_16 = V_1;
-		PriorityQueue_tE9C3C922E642027E82C73544CC14DA8A0684BC6F * L_17 = L_16->get_pq_5();
-		Dijkstra_tA9804A39572A0E3EE1DCDD489B16C15AFF294817 * L_18 = V_1;
-		MapManager_t4589A236B4CE205CE81E79FECBCD6B3F3F99F225 * L_19 = L_18->get_mapManager_4();
-		Dictionary_2_t245E9FE36D93681DBF00922FDE124397B10C5B96 * L_20 = L_19->get_tiles_6();
-		PriorityQueue_buildHeap_mD33DCC3817E8DB51F27C6DB7CA746F0379803075(L_17, L_20, /*hidden argument*/NULL);
+		Dijkstra_tA9804A39572A0E3EE1DCDD489B16C15AFF294817 * L_24 = V_1;
+		PriorityQueue_tE9C3C922E642027E82C73544CC14DA8A0684BC6F * L_25 = L_24->get_pq_5();
+		Dijkstra_tA9804A39572A0E3EE1DCDD489B16C15AFF294817 * L_26 = V_1;
+		MapManager_t4589A236B4CE205CE81E79FECBCD6B3F3F99F225 * L_27 = L_26->get_mapManager_4();
+		Dictionary_2_t245E9FE36D93681DBF00922FDE124397B10C5B96 * L_28 = L_27->get_tiles_6();
+		PriorityQueue_buildHeap_mD33DCC3817E8DB51F27C6DB7CA746F0379803075(L_25, L_28, /*hidden argument*/NULL);
 		// bool breakFlag = false; // function exits when either pq is empty or when finish has been found
-		__this->set_U3CbreakFlagU3E5__2_3((bool)0);
-		goto IL_024d;
+		__this->set_U3CbreakFlagU3E5__3_4((bool)0);
+		goto IL_02b7;
 	}
 
-IL_007e:
+IL_00a4:
 	{
 		// Vector3Int currentVert = pq.delMin();
-		Dijkstra_tA9804A39572A0E3EE1DCDD489B16C15AFF294817 * L_21 = V_1;
-		PriorityQueue_tE9C3C922E642027E82C73544CC14DA8A0684BC6F * L_22 = L_21->get_pq_5();
-		Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_23;
-		L_23 = PriorityQueue_delMin_m8DE01AD4FEC63677031B43ECD4DFAEF1516AA3A7(L_22, /*hidden argument*/NULL);
-		__this->set_U3CcurrentVertU3E5__3_4(L_23);
+		Dijkstra_tA9804A39572A0E3EE1DCDD489B16C15AFF294817 * L_29 = V_1;
+		PriorityQueue_tE9C3C922E642027E82C73544CC14DA8A0684BC6F * L_30 = L_29->get_pq_5();
+		Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_31;
+		L_31 = PriorityQueue_delMin_m8DE01AD4FEC63677031B43ECD4DFAEF1516AA3A7(L_30, /*hidden argument*/NULL);
+		__this->set_U3CcurrentVertU3E5__4_5(L_31);
+		// if (mapManager.tiles[currentVert].distance != dist){ // better system of pausing Dijkstra
+		Dijkstra_tA9804A39572A0E3EE1DCDD489B16C15AFF294817 * L_32 = V_1;
+		MapManager_t4589A236B4CE205CE81E79FECBCD6B3F3F99F225 * L_33 = L_32->get_mapManager_4();
+		Dictionary_2_t245E9FE36D93681DBF00922FDE124397B10C5B96 * L_34 = L_33->get_tiles_6();
+		Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_35 = __this->get_U3CcurrentVertU3E5__4_5();
+		TileScript_t6E723D639E7213BAEA1F8346F405265665193642 * L_36;
+		L_36 = Dictionary_2_get_Item_mE363511C92A9A3D9742DDF72B542806FCCA52730(L_34, L_35, /*hidden argument*/Dictionary_2_get_Item_mE363511C92A9A3D9742DDF72B542806FCCA52730_RuntimeMethod_var);
+		float L_37 = L_36->get_distance_3();
+		float L_38 = __this->get_U3CdistU3E5__2_3();
+		if ((((float)L_37) == ((float)L_38)))
+		{
+			goto IL_0120;
+		}
+	}
+	{
+		// dist = mapManager.tiles[currentVert].distance;
+		Dijkstra_tA9804A39572A0E3EE1DCDD489B16C15AFF294817 * L_39 = V_1;
+		MapManager_t4589A236B4CE205CE81E79FECBCD6B3F3F99F225 * L_40 = L_39->get_mapManager_4();
+		Dictionary_2_t245E9FE36D93681DBF00922FDE124397B10C5B96 * L_41 = L_40->get_tiles_6();
+		Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_42 = __this->get_U3CcurrentVertU3E5__4_5();
+		TileScript_t6E723D639E7213BAEA1F8346F405265665193642 * L_43;
+		L_43 = Dictionary_2_get_Item_mE363511C92A9A3D9742DDF72B542806FCCA52730(L_41, L_42, /*hidden argument*/Dictionary_2_get_Item_mE363511C92A9A3D9742DDF72B542806FCCA52730_RuntimeMethod_var);
+		float L_44 = L_43->get_distance_3();
+		__this->set_U3CdistU3E5__2_3(L_44);
 		// yield return new WaitForSeconds(1/speed);
-		Dijkstra_tA9804A39572A0E3EE1DCDD489B16C15AFF294817 * L_24 = V_1;
-		float L_25 = L_24->get_speed_6();
-		WaitForSeconds_t8F9189BE6E467C98C99177038881F8982E0E4013 * L_26 = (WaitForSeconds_t8F9189BE6E467C98C99177038881F8982E0E4013 *)il2cpp_codegen_object_new(WaitForSeconds_t8F9189BE6E467C98C99177038881F8982E0E4013_il2cpp_TypeInfo_var);
-		WaitForSeconds__ctor_mD298C4CB9532BBBDE172FC40F3397E30504038D4(L_26, ((float)((float)(1.0f)/(float)L_25)), /*hidden argument*/NULL);
-		__this->set_U3CU3E2__current_1(L_26);
+		Dijkstra_tA9804A39572A0E3EE1DCDD489B16C15AFF294817 * L_45 = V_1;
+		float L_46 = L_45->get_speed_6();
+		WaitForSeconds_t8F9189BE6E467C98C99177038881F8982E0E4013 * L_47 = (WaitForSeconds_t8F9189BE6E467C98C99177038881F8982E0E4013 *)il2cpp_codegen_object_new(WaitForSeconds_t8F9189BE6E467C98C99177038881F8982E0E4013_il2cpp_TypeInfo_var);
+		WaitForSeconds__ctor_mD298C4CB9532BBBDE172FC40F3397E30504038D4(L_47, ((float)((float)(1.0f)/(float)L_46)), /*hidden argument*/NULL);
+		__this->set_U3CU3E2__current_1(L_47);
 		__this->set_U3CU3E1__state_0(1);
 		return (bool)1;
 	}
 
-IL_00af:
+IL_0119:
 	{
 		__this->set_U3CU3E1__state_0((-1));
-		// foreach (Vector3Int nextVert in mapManager.tiles[currentVert].neighbors){
-		Dijkstra_tA9804A39572A0E3EE1DCDD489B16C15AFF294817 * L_27 = V_1;
-		MapManager_t4589A236B4CE205CE81E79FECBCD6B3F3F99F225 * L_28 = L_27->get_mapManager_4();
-		Dictionary_2_t245E9FE36D93681DBF00922FDE124397B10C5B96 * L_29 = L_28->get_tiles_6();
-		Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_30 = __this->get_U3CcurrentVertU3E5__3_4();
-		TileScript_t6E723D639E7213BAEA1F8346F405265665193642 * L_31;
-		L_31 = Dictionary_2_get_Item_mE363511C92A9A3D9742DDF72B542806FCCA52730(L_29, L_30, /*hidden argument*/Dictionary_2_get_Item_mE363511C92A9A3D9742DDF72B542806FCCA52730_RuntimeMethod_var);
-		List_1_tC83E49B6D8D9141EE2259E65D50945953846C57D * L_32 = L_31->get_neighbors_1();
-		Enumerator_t8C533528A604C56BF7D1A679D261973E9F97DB6B  L_33;
-		L_33 = List_1_GetEnumerator_mB4EDF9760C2C10E4C55BF9DDF88581A9C632B08F(L_32, /*hidden argument*/List_1_GetEnumerator_mB4EDF9760C2C10E4C55BF9DDF88581A9C632B08F_RuntimeMethod_var);
-		V_4 = L_33;
 	}
 
-IL_00d8:
+IL_0120:
+	{
+		// foreach (Vector3Int nextVert in mapManager.tiles[currentVert].neighbors){
+		Dijkstra_tA9804A39572A0E3EE1DCDD489B16C15AFF294817 * L_48 = V_1;
+		MapManager_t4589A236B4CE205CE81E79FECBCD6B3F3F99F225 * L_49 = L_48->get_mapManager_4();
+		Dictionary_2_t245E9FE36D93681DBF00922FDE124397B10C5B96 * L_50 = L_49->get_tiles_6();
+		Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_51 = __this->get_U3CcurrentVertU3E5__4_5();
+		TileScript_t6E723D639E7213BAEA1F8346F405265665193642 * L_52;
+		L_52 = Dictionary_2_get_Item_mE363511C92A9A3D9742DDF72B542806FCCA52730(L_50, L_51, /*hidden argument*/Dictionary_2_get_Item_mE363511C92A9A3D9742DDF72B542806FCCA52730_RuntimeMethod_var);
+		List_1_tC83E49B6D8D9141EE2259E65D50945953846C57D * L_53 = L_52->get_neighbors_1();
+		Enumerator_t8C533528A604C56BF7D1A679D261973E9F97DB6B  L_54;
+		L_54 = List_1_GetEnumerator_mB4EDF9760C2C10E4C55BF9DDF88581A9C632B08F(L_53, /*hidden argument*/List_1_GetEnumerator_mB4EDF9760C2C10E4C55BF9DDF88581A9C632B08F_RuntimeMethod_var);
+		V_4 = L_54;
+	}
+
+IL_0142:
 	try
 	{ // begin try (depth: 1)
 		{
-			goto IL_0225;
+			goto IL_028f;
 		}
 
-IL_00dd:
+IL_0147:
 		{
 			// foreach (Vector3Int nextVert in mapManager.tiles[currentVert].neighbors){
-			Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_34;
-			L_34 = Enumerator_get_Current_m99042ADCE04C7F19E46770E3A81699BE449DF93F_inline((Enumerator_t8C533528A604C56BF7D1A679D261973E9F97DB6B *)(&V_4), /*hidden argument*/Enumerator_get_Current_m99042ADCE04C7F19E46770E3A81699BE449DF93F_RuntimeMethod_var);
-			V_5 = L_34;
+			Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_55;
+			L_55 = Enumerator_get_Current_m99042ADCE04C7F19E46770E3A81699BE449DF93F_inline((Enumerator_t8C533528A604C56BF7D1A679D261973E9F97DB6B *)(&V_4), /*hidden argument*/Enumerator_get_Current_m99042ADCE04C7F19E46770E3A81699BE449DF93F_RuntimeMethod_var);
+			V_5 = L_55;
 			// float newDist = mapManager.tiles[currentVert].distance + mapManager.tiles[currentVert].weight; // finding new distance
-			Dijkstra_tA9804A39572A0E3EE1DCDD489B16C15AFF294817 * L_35 = V_1;
-			MapManager_t4589A236B4CE205CE81E79FECBCD6B3F3F99F225 * L_36 = L_35->get_mapManager_4();
-			Dictionary_2_t245E9FE36D93681DBF00922FDE124397B10C5B96 * L_37 = L_36->get_tiles_6();
-			Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_38 = __this->get_U3CcurrentVertU3E5__3_4();
-			TileScript_t6E723D639E7213BAEA1F8346F405265665193642 * L_39;
-			L_39 = Dictionary_2_get_Item_mE363511C92A9A3D9742DDF72B542806FCCA52730(L_37, L_38, /*hidden argument*/Dictionary_2_get_Item_mE363511C92A9A3D9742DDF72B542806FCCA52730_RuntimeMethod_var);
-			float L_40 = L_39->get_distance_3();
-			Dijkstra_tA9804A39572A0E3EE1DCDD489B16C15AFF294817 * L_41 = V_1;
-			MapManager_t4589A236B4CE205CE81E79FECBCD6B3F3F99F225 * L_42 = L_41->get_mapManager_4();
-			Dictionary_2_t245E9FE36D93681DBF00922FDE124397B10C5B96 * L_43 = L_42->get_tiles_6();
-			Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_44 = __this->get_U3CcurrentVertU3E5__3_4();
-			TileScript_t6E723D639E7213BAEA1F8346F405265665193642 * L_45;
-			L_45 = Dictionary_2_get_Item_mE363511C92A9A3D9742DDF72B542806FCCA52730(L_43, L_44, /*hidden argument*/Dictionary_2_get_Item_mE363511C92A9A3D9742DDF72B542806FCCA52730_RuntimeMethod_var);
-			float L_46 = L_45->get_weight_2();
-			V_6 = ((float)il2cpp_codegen_add((float)L_40, (float)L_46));
+			Dijkstra_tA9804A39572A0E3EE1DCDD489B16C15AFF294817 * L_56 = V_1;
+			MapManager_t4589A236B4CE205CE81E79FECBCD6B3F3F99F225 * L_57 = L_56->get_mapManager_4();
+			Dictionary_2_t245E9FE36D93681DBF00922FDE124397B10C5B96 * L_58 = L_57->get_tiles_6();
+			Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_59 = __this->get_U3CcurrentVertU3E5__4_5();
+			TileScript_t6E723D639E7213BAEA1F8346F405265665193642 * L_60;
+			L_60 = Dictionary_2_get_Item_mE363511C92A9A3D9742DDF72B542806FCCA52730(L_58, L_59, /*hidden argument*/Dictionary_2_get_Item_mE363511C92A9A3D9742DDF72B542806FCCA52730_RuntimeMethod_var);
+			float L_61 = L_60->get_distance_3();
+			Dijkstra_tA9804A39572A0E3EE1DCDD489B16C15AFF294817 * L_62 = V_1;
+			MapManager_t4589A236B4CE205CE81E79FECBCD6B3F3F99F225 * L_63 = L_62->get_mapManager_4();
+			Dictionary_2_t245E9FE36D93681DBF00922FDE124397B10C5B96 * L_64 = L_63->get_tiles_6();
+			Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_65 = __this->get_U3CcurrentVertU3E5__4_5();
+			TileScript_t6E723D639E7213BAEA1F8346F405265665193642 * L_66;
+			L_66 = Dictionary_2_get_Item_mE363511C92A9A3D9742DDF72B542806FCCA52730(L_64, L_65, /*hidden argument*/Dictionary_2_get_Item_mE363511C92A9A3D9742DDF72B542806FCCA52730_RuntimeMethod_var);
+			float L_67 = L_66->get_weight_2();
+			V_6 = ((float)il2cpp_codegen_add((float)L_61, (float)L_67));
 			// if (newDist < mapManager.tiles[nextVert].distance){ // if new distance is less than old distance
-			float L_47 = V_6;
-			Dijkstra_tA9804A39572A0E3EE1DCDD489B16C15AFF294817 * L_48 = V_1;
-			MapManager_t4589A236B4CE205CE81E79FECBCD6B3F3F99F225 * L_49 = L_48->get_mapManager_4();
-			Dictionary_2_t245E9FE36D93681DBF00922FDE124397B10C5B96 * L_50 = L_49->get_tiles_6();
-			Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_51 = V_5;
-			TileScript_t6E723D639E7213BAEA1F8346F405265665193642 * L_52;
-			L_52 = Dictionary_2_get_Item_mE363511C92A9A3D9742DDF72B542806FCCA52730(L_50, L_51, /*hidden argument*/Dictionary_2_get_Item_mE363511C92A9A3D9742DDF72B542806FCCA52730_RuntimeMethod_var);
-			float L_53 = L_52->get_distance_3();
-			if ((!(((float)L_47) < ((float)L_53))))
+			float L_68 = V_6;
+			Dijkstra_tA9804A39572A0E3EE1DCDD489B16C15AFF294817 * L_69 = V_1;
+			MapManager_t4589A236B4CE205CE81E79FECBCD6B3F3F99F225 * L_70 = L_69->get_mapManager_4();
+			Dictionary_2_t245E9FE36D93681DBF00922FDE124397B10C5B96 * L_71 = L_70->get_tiles_6();
+			Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_72 = V_5;
+			TileScript_t6E723D639E7213BAEA1F8346F405265665193642 * L_73;
+			L_73 = Dictionary_2_get_Item_mE363511C92A9A3D9742DDF72B542806FCCA52730(L_71, L_72, /*hidden argument*/Dictionary_2_get_Item_mE363511C92A9A3D9742DDF72B542806FCCA52730_RuntimeMethod_var);
+			float L_74 = L_73->get_distance_3();
+			if ((!(((float)L_68) < ((float)L_74))))
 			{
-				goto IL_0225;
+				goto IL_028f;
 			}
 		}
 
-IL_013d:
+IL_01a7:
 		{
 			// if (!mapManager.tiles[nextVert].isWall){ // keeps color of walls gray
-			Dijkstra_tA9804A39572A0E3EE1DCDD489B16C15AFF294817 * L_54 = V_1;
-			MapManager_t4589A236B4CE205CE81E79FECBCD6B3F3F99F225 * L_55 = L_54->get_mapManager_4();
-			Dictionary_2_t245E9FE36D93681DBF00922FDE124397B10C5B96 * L_56 = L_55->get_tiles_6();
-			Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_57 = V_5;
-			TileScript_t6E723D639E7213BAEA1F8346F405265665193642 * L_58;
-			L_58 = Dictionary_2_get_Item_mE363511C92A9A3D9742DDF72B542806FCCA52730(L_56, L_57, /*hidden argument*/Dictionary_2_get_Item_mE363511C92A9A3D9742DDF72B542806FCCA52730_RuntimeMethod_var);
-			bool L_59 = L_58->get_isWall_4();
-			if (L_59)
+			Dijkstra_tA9804A39572A0E3EE1DCDD489B16C15AFF294817 * L_75 = V_1;
+			MapManager_t4589A236B4CE205CE81E79FECBCD6B3F3F99F225 * L_76 = L_75->get_mapManager_4();
+			Dictionary_2_t245E9FE36D93681DBF00922FDE124397B10C5B96 * L_77 = L_76->get_tiles_6();
+			Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_78 = V_5;
+			TileScript_t6E723D639E7213BAEA1F8346F405265665193642 * L_79;
+			L_79 = Dictionary_2_get_Item_mE363511C92A9A3D9742DDF72B542806FCCA52730(L_77, L_78, /*hidden argument*/Dictionary_2_get_Item_mE363511C92A9A3D9742DDF72B542806FCCA52730_RuntimeMethod_var);
+			bool L_80 = L_79->get_isWall_4();
+			if (L_80)
 			{
-				goto IL_018a;
+				goto IL_01f4;
 			}
 		}
 
-IL_0156:
+IL_01c0:
 		{
 			// map.SetTileFlags(nextVert,TileFlags.None); // turns color of tile blue
-			Dijkstra_tA9804A39572A0E3EE1DCDD489B16C15AFF294817 * L_60 = V_1;
-			Tilemap_t0A1D80C1C0EDF8BDB0A2E274DC0826EF03642F31 * L_61 = L_60->get_map_7();
-			Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_62 = V_5;
-			Tilemap_SetTileFlags_mC88DE5654C5FAB5CFBDD0CAD7ED500AD0B1033C2(L_61, L_62, 0, /*hidden argument*/NULL);
+			Dijkstra_tA9804A39572A0E3EE1DCDD489B16C15AFF294817 * L_81 = V_1;
+			Tilemap_t0A1D80C1C0EDF8BDB0A2E274DC0826EF03642F31 * L_82 = L_81->get_map_7();
+			Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_83 = V_5;
+			Tilemap_SetTileFlags_mC88DE5654C5FAB5CFBDD0CAD7ED500AD0B1033C2(L_82, L_83, 0, /*hidden argument*/NULL);
 			// map.SetColor(nextVert, new Color(0, 0, 1, 1));
-			Dijkstra_tA9804A39572A0E3EE1DCDD489B16C15AFF294817 * L_63 = V_1;
-			Tilemap_t0A1D80C1C0EDF8BDB0A2E274DC0826EF03642F31 * L_64 = L_63->get_map_7();
-			Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_65 = V_5;
-			Color_tF40DAF76C04FFECF3FE6024F85A294741C9CC659  L_66;
-			memset((&L_66), 0, sizeof(L_66));
-			Color__ctor_m679019E6084BF7A6F82590F66F5F695F6A50ECC5((&L_66), (0.0f), (0.0f), (1.0f), (1.0f), /*hidden argument*/NULL);
-			Tilemap_SetColor_mC78B3CC9FFA5C5EB63D061FBBD047D24C13BEA81(L_64, L_65, L_66, /*hidden argument*/NULL);
+			Dijkstra_tA9804A39572A0E3EE1DCDD489B16C15AFF294817 * L_84 = V_1;
+			Tilemap_t0A1D80C1C0EDF8BDB0A2E274DC0826EF03642F31 * L_85 = L_84->get_map_7();
+			Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_86 = V_5;
+			Color_tF40DAF76C04FFECF3FE6024F85A294741C9CC659  L_87;
+			memset((&L_87), 0, sizeof(L_87));
+			Color__ctor_m679019E6084BF7A6F82590F66F5F695F6A50ECC5((&L_87), (0.0f), (0.0f), (1.0f), (1.0f), /*hidden argument*/NULL);
+			Tilemap_SetColor_mC78B3CC9FFA5C5EB63D061FBBD047D24C13BEA81(L_85, L_86, L_87, /*hidden argument*/NULL);
 		}
 
-IL_018a:
+IL_01f4:
 		{
 			// mapManager.tiles[nextVert].distance = newDist;
-			Dijkstra_tA9804A39572A0E3EE1DCDD489B16C15AFF294817 * L_67 = V_1;
-			MapManager_t4589A236B4CE205CE81E79FECBCD6B3F3F99F225 * L_68 = L_67->get_mapManager_4();
-			Dictionary_2_t245E9FE36D93681DBF00922FDE124397B10C5B96 * L_69 = L_68->get_tiles_6();
-			Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_70 = V_5;
-			TileScript_t6E723D639E7213BAEA1F8346F405265665193642 * L_71;
-			L_71 = Dictionary_2_get_Item_mE363511C92A9A3D9742DDF72B542806FCCA52730(L_69, L_70, /*hidden argument*/Dictionary_2_get_Item_mE363511C92A9A3D9742DDF72B542806FCCA52730_RuntimeMethod_var);
-			float L_72 = V_6;
-			L_71->set_distance_3(L_72);
+			Dijkstra_tA9804A39572A0E3EE1DCDD489B16C15AFF294817 * L_88 = V_1;
+			MapManager_t4589A236B4CE205CE81E79FECBCD6B3F3F99F225 * L_89 = L_88->get_mapManager_4();
+			Dictionary_2_t245E9FE36D93681DBF00922FDE124397B10C5B96 * L_90 = L_89->get_tiles_6();
+			Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_91 = V_5;
+			TileScript_t6E723D639E7213BAEA1F8346F405265665193642 * L_92;
+			L_92 = Dictionary_2_get_Item_mE363511C92A9A3D9742DDF72B542806FCCA52730(L_90, L_91, /*hidden argument*/Dictionary_2_get_Item_mE363511C92A9A3D9742DDF72B542806FCCA52730_RuntimeMethod_var);
+			float L_93 = V_6;
+			L_92->set_distance_3(L_93);
 			// mapManager.tiles[nextVert].pred = currentVert;
-			Dijkstra_tA9804A39572A0E3EE1DCDD489B16C15AFF294817 * L_73 = V_1;
-			MapManager_t4589A236B4CE205CE81E79FECBCD6B3F3F99F225 * L_74 = L_73->get_mapManager_4();
-			Dictionary_2_t245E9FE36D93681DBF00922FDE124397B10C5B96 * L_75 = L_74->get_tiles_6();
-			Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_76 = V_5;
-			TileScript_t6E723D639E7213BAEA1F8346F405265665193642 * L_77;
-			L_77 = Dictionary_2_get_Item_mE363511C92A9A3D9742DDF72B542806FCCA52730(L_75, L_76, /*hidden argument*/Dictionary_2_get_Item_mE363511C92A9A3D9742DDF72B542806FCCA52730_RuntimeMethod_var);
-			Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_78 = __this->get_U3CcurrentVertU3E5__3_4();
-			L_77->set_pred_8(L_78);
+			Dijkstra_tA9804A39572A0E3EE1DCDD489B16C15AFF294817 * L_94 = V_1;
+			MapManager_t4589A236B4CE205CE81E79FECBCD6B3F3F99F225 * L_95 = L_94->get_mapManager_4();
+			Dictionary_2_t245E9FE36D93681DBF00922FDE124397B10C5B96 * L_96 = L_95->get_tiles_6();
+			Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_97 = V_5;
+			TileScript_t6E723D639E7213BAEA1F8346F405265665193642 * L_98;
+			L_98 = Dictionary_2_get_Item_mE363511C92A9A3D9742DDF72B542806FCCA52730(L_96, L_97, /*hidden argument*/Dictionary_2_get_Item_mE363511C92A9A3D9742DDF72B542806FCCA52730_RuntimeMethod_var);
+			Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_99 = __this->get_U3CcurrentVertU3E5__4_5();
+			L_98->set_pred_8(L_99);
 			// pq.decreaseKey(nextVert, mapManager.tiles[nextVert].distance); // resetting Priority Queue
-			Dijkstra_tA9804A39572A0E3EE1DCDD489B16C15AFF294817 * L_79 = V_1;
-			PriorityQueue_tE9C3C922E642027E82C73544CC14DA8A0684BC6F * L_80 = L_79->get_pq_5();
-			Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_81 = V_5;
-			Dijkstra_tA9804A39572A0E3EE1DCDD489B16C15AFF294817 * L_82 = V_1;
-			MapManager_t4589A236B4CE205CE81E79FECBCD6B3F3F99F225 * L_83 = L_82->get_mapManager_4();
-			Dictionary_2_t245E9FE36D93681DBF00922FDE124397B10C5B96 * L_84 = L_83->get_tiles_6();
-			Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_85 = V_5;
-			TileScript_t6E723D639E7213BAEA1F8346F405265665193642 * L_86;
-			L_86 = Dictionary_2_get_Item_mE363511C92A9A3D9742DDF72B542806FCCA52730(L_84, L_85, /*hidden argument*/Dictionary_2_get_Item_mE363511C92A9A3D9742DDF72B542806FCCA52730_RuntimeMethod_var);
-			float L_87 = L_86->get_distance_3();
-			PriorityQueue_decreaseKey_m048C75FBF235E25D2CDE8E397FDEFE4FA9D719A9(L_80, L_81, L_87, /*hidden argument*/NULL);
+			Dijkstra_tA9804A39572A0E3EE1DCDD489B16C15AFF294817 * L_100 = V_1;
+			PriorityQueue_tE9C3C922E642027E82C73544CC14DA8A0684BC6F * L_101 = L_100->get_pq_5();
+			Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_102 = V_5;
+			Dijkstra_tA9804A39572A0E3EE1DCDD489B16C15AFF294817 * L_103 = V_1;
+			MapManager_t4589A236B4CE205CE81E79FECBCD6B3F3F99F225 * L_104 = L_103->get_mapManager_4();
+			Dictionary_2_t245E9FE36D93681DBF00922FDE124397B10C5B96 * L_105 = L_104->get_tiles_6();
+			Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_106 = V_5;
+			TileScript_t6E723D639E7213BAEA1F8346F405265665193642 * L_107;
+			L_107 = Dictionary_2_get_Item_mE363511C92A9A3D9742DDF72B542806FCCA52730(L_105, L_106, /*hidden argument*/Dictionary_2_get_Item_mE363511C92A9A3D9742DDF72B542806FCCA52730_RuntimeMethod_var);
+			float L_108 = L_107->get_distance_3();
+			PriorityQueue_decreaseKey_m048C75FBF235E25D2CDE8E397FDEFE4FA9D719A9(L_101, L_102, L_108, /*hidden argument*/NULL);
 			// if (nextVert == mapManager.finish){ // finish has been found, stop while loop
-			Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_88 = V_5;
-			Dijkstra_tA9804A39572A0E3EE1DCDD489B16C15AFF294817 * L_89 = V_1;
-			MapManager_t4589A236B4CE205CE81E79FECBCD6B3F3F99F225 * L_90 = L_89->get_mapManager_4();
-			Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_91 = L_90->get_finish_8();
-			bool L_92;
-			L_92 = Vector3Int_op_Equality_m724847B7E7A484A1E6F598CEC2D77CDE8ECE49E7_inline(L_88, L_91, /*hidden argument*/NULL);
-			if (!L_92)
+			Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_109 = V_5;
+			Dijkstra_tA9804A39572A0E3EE1DCDD489B16C15AFF294817 * L_110 = V_1;
+			MapManager_t4589A236B4CE205CE81E79FECBCD6B3F3F99F225 * L_111 = L_110->get_mapManager_4();
+			Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_112 = L_111->get_finish_8();
+			bool L_113;
+			L_113 = Vector3Int_op_Equality_m724847B7E7A484A1E6F598CEC2D77CDE8ECE49E7_inline(L_109, L_112, /*hidden argument*/NULL);
+			if (!L_113)
 			{
-				goto IL_0225;
+				goto IL_028f;
 			}
 		}
 
-IL_01f8:
+IL_0262:
 		{
 			// Debug.Log($"{mapManager.finish} | {nextVert}");
-			Dijkstra_tA9804A39572A0E3EE1DCDD489B16C15AFF294817 * L_93 = V_1;
-			MapManager_t4589A236B4CE205CE81E79FECBCD6B3F3F99F225 * L_94 = L_93->get_mapManager_4();
-			Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_95 = L_94->get_finish_8();
-			Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_96 = L_95;
-			RuntimeObject * L_97 = Box(Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA_il2cpp_TypeInfo_var, &L_96);
-			Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_98 = V_5;
-			Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_99 = L_98;
-			RuntimeObject * L_100 = Box(Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA_il2cpp_TypeInfo_var, &L_99);
-			String_t* L_101;
-			L_101 = String_Format_m8D1CB0410C35E052A53AE957C914C841E54BAB66(_stringLiteralE7721A47648B53D1891F250EA273B37FCC74C117, L_97, L_100, /*hidden argument*/NULL);
+			Dijkstra_tA9804A39572A0E3EE1DCDD489B16C15AFF294817 * L_114 = V_1;
+			MapManager_t4589A236B4CE205CE81E79FECBCD6B3F3F99F225 * L_115 = L_114->get_mapManager_4();
+			Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_116 = L_115->get_finish_8();
+			Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_117 = L_116;
+			RuntimeObject * L_118 = Box(Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA_il2cpp_TypeInfo_var, &L_117);
+			Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_119 = V_5;
+			Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_120 = L_119;
+			RuntimeObject * L_121 = Box(Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA_il2cpp_TypeInfo_var, &L_120);
+			String_t* L_122;
+			L_122 = String_Format_m8D1CB0410C35E052A53AE957C914C841E54BAB66(_stringLiteralE7721A47648B53D1891F250EA273B37FCC74C117, L_118, L_121, /*hidden argument*/NULL);
 			IL2CPP_RUNTIME_CLASS_INIT(Debug_tEB68BCBEB8EFD60F8043C67146DC05E7F50F374B_il2cpp_TypeInfo_var);
-			Debug_Log_mC26E5AD0D8D156C7FFD173AA15827F69225E9DB8(L_101, /*hidden argument*/NULL);
+			Debug_Log_mC26E5AD0D8D156C7FFD173AA15827F69225E9DB8(L_122, /*hidden argument*/NULL);
 			// breakFlag = true;
-			__this->set_U3CbreakFlagU3E5__2_3((bool)1);
+			__this->set_U3CbreakFlagU3E5__3_4((bool)1);
 		}
 
-IL_0225:
+IL_028f:
 		{
 			// foreach (Vector3Int nextVert in mapManager.tiles[currentVert].neighbors){
-			bool L_102;
-			L_102 = Enumerator_MoveNext_mFE5E8A6CED2FC95FD8F8ED0AA6E65C301D85E4A2((Enumerator_t8C533528A604C56BF7D1A679D261973E9F97DB6B *)(&V_4), /*hidden argument*/Enumerator_MoveNext_mFE5E8A6CED2FC95FD8F8ED0AA6E65C301D85E4A2_RuntimeMethod_var);
-			if (L_102)
+			bool L_123;
+			L_123 = Enumerator_MoveNext_mFE5E8A6CED2FC95FD8F8ED0AA6E65C301D85E4A2((Enumerator_t8C533528A604C56BF7D1A679D261973E9F97DB6B *)(&V_4), /*hidden argument*/Enumerator_MoveNext_mFE5E8A6CED2FC95FD8F8ED0AA6E65C301D85E4A2_RuntimeMethod_var);
+			if (L_123)
 			{
-				goto IL_00dd;
+				goto IL_0147;
 			}
 		}
 
-IL_0231:
+IL_029b:
 		{
-			IL2CPP_LEAVE(0x241, FINALLY_0233);
+			IL2CPP_LEAVE(0x2AB, FINALLY_029d);
 		}
 	} // end try (depth: 1)
 	catch(Il2CppExceptionWrapper& e)
 	{
 		__last_unhandled_exception = (Exception_t *)e.ex;
-		goto FINALLY_0233;
+		goto FINALLY_029d;
 	}
 
-FINALLY_0233:
+FINALLY_029d:
 	{ // begin finally (depth: 1)
 		Enumerator_Dispose_m1A0EF36A04E65634D688ABE2DB81698CCD3692BA((Enumerator_t8C533528A604C56BF7D1A679D261973E9F97DB6B *)(&V_4), /*hidden argument*/Enumerator_Dispose_m1A0EF36A04E65634D688ABE2DB81698CCD3692BA_RuntimeMethod_var);
-		IL2CPP_END_FINALLY(563)
+		IL2CPP_END_FINALLY(669)
 	} // end finally (depth: 1)
-	IL2CPP_CLEANUP(563)
+	IL2CPP_CLEANUP(669)
 	{
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
-		IL2CPP_JUMP_TBL(0x241, IL_0241)
+		IL2CPP_JUMP_TBL(0x2AB, IL_02ab)
 	}
 
-IL_0241:
+IL_02ab:
 	{
 		// } // while !pq.isEmpty
-		Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA * L_103 = __this->get_address_of_U3CcurrentVertU3E5__3_4();
-		il2cpp_codegen_initobj(L_103, sizeof(Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA ));
+		Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA * L_124 = __this->get_address_of_U3CcurrentVertU3E5__4_5();
+		il2cpp_codegen_initobj(L_124, sizeof(Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA ));
 	}
 
-IL_024d:
+IL_02b7:
 	{
 		// while (!breakFlag && !pq.isEmpty()){
-		bool L_104 = __this->get_U3CbreakFlagU3E5__2_3();
-		if (L_104)
+		bool L_125 = __this->get_U3CbreakFlagU3E5__3_4();
+		if (L_125)
 		{
-			goto IL_0265;
+			goto IL_02cf;
 		}
 	}
 	{
-		Dijkstra_tA9804A39572A0E3EE1DCDD489B16C15AFF294817 * L_105 = V_1;
-		PriorityQueue_tE9C3C922E642027E82C73544CC14DA8A0684BC6F * L_106 = L_105->get_pq_5();
-		bool L_107;
-		L_107 = PriorityQueue_isEmpty_m2CA6C937FA1E7C6A03EA69EEDBFAC00DBA301170(L_106, /*hidden argument*/NULL);
-		if (!L_107)
+		Dijkstra_tA9804A39572A0E3EE1DCDD489B16C15AFF294817 * L_126 = V_1;
+		PriorityQueue_tE9C3C922E642027E82C73544CC14DA8A0684BC6F * L_127 = L_126->get_pq_5();
+		bool L_128;
+		L_128 = PriorityQueue_isEmpty_m2CA6C937FA1E7C6A03EA69EEDBFAC00DBA301170(L_127, /*hidden argument*/NULL);
+		if (!L_128)
 		{
-			goto IL_007e;
+			goto IL_00a4;
 		}
 	}
 
-IL_0265:
+IL_02cf:
 	{
 		// pq.heapList = new List<(float, Vector3Int)>(); // resetting list
-		Dijkstra_tA9804A39572A0E3EE1DCDD489B16C15AFF294817 * L_108 = V_1;
-		PriorityQueue_tE9C3C922E642027E82C73544CC14DA8A0684BC6F * L_109 = L_108->get_pq_5();
-		List_1_t59C54DBEBC137F5FFB1F0208C5FAF59D2B84DDB4 * L_110 = (List_1_t59C54DBEBC137F5FFB1F0208C5FAF59D2B84DDB4 *)il2cpp_codegen_object_new(List_1_t59C54DBEBC137F5FFB1F0208C5FAF59D2B84DDB4_il2cpp_TypeInfo_var);
-		List_1__ctor_m8E42011BCD7853639127DFB481489DEA580A3305(L_110, /*hidden argument*/List_1__ctor_m8E42011BCD7853639127DFB481489DEA580A3305_RuntimeMethod_var);
-		L_109->set_heapList_0(L_110);
+		Dijkstra_tA9804A39572A0E3EE1DCDD489B16C15AFF294817 * L_129 = V_1;
+		PriorityQueue_tE9C3C922E642027E82C73544CC14DA8A0684BC6F * L_130 = L_129->get_pq_5();
+		List_1_t59C54DBEBC137F5FFB1F0208C5FAF59D2B84DDB4 * L_131 = (List_1_t59C54DBEBC137F5FFB1F0208C5FAF59D2B84DDB4 *)il2cpp_codegen_object_new(List_1_t59C54DBEBC137F5FFB1F0208C5FAF59D2B84DDB4_il2cpp_TypeInfo_var);
+		List_1__ctor_m8E42011BCD7853639127DFB481489DEA580A3305(L_131, /*hidden argument*/List_1__ctor_m8E42011BCD7853639127DFB481489DEA580A3305_RuntimeMethod_var);
+		L_130->set_heapList_0(L_131);
 		// Vector3Int vert = mapManager.finish;
-		Dijkstra_tA9804A39572A0E3EE1DCDD489B16C15AFF294817 * L_111 = V_1;
-		MapManager_t4589A236B4CE205CE81E79FECBCD6B3F3F99F225 * L_112 = L_111->get_mapManager_4();
-		Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_113 = L_112->get_finish_8();
-		V_2 = L_113;
+		Dijkstra_tA9804A39572A0E3EE1DCDD489B16C15AFF294817 * L_132 = V_1;
+		MapManager_t4589A236B4CE205CE81E79FECBCD6B3F3F99F225 * L_133 = L_132->get_mapManager_4();
+		Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_134 = L_133->get_finish_8();
+		V_2 = L_134;
 		// List<Vector3Int> predList = new List<Vector3Int>();
-		List_1_tC83E49B6D8D9141EE2259E65D50945953846C57D * L_114 = (List_1_tC83E49B6D8D9141EE2259E65D50945953846C57D *)il2cpp_codegen_object_new(List_1_tC83E49B6D8D9141EE2259E65D50945953846C57D_il2cpp_TypeInfo_var);
-		List_1__ctor_mFDEAA2F6957949B6925A5BFE84DDC19F3118395E(L_114, /*hidden argument*/List_1__ctor_mFDEAA2F6957949B6925A5BFE84DDC19F3118395E_RuntimeMethod_var);
-		V_3 = L_114;
-		goto IL_02be;
+		List_1_tC83E49B6D8D9141EE2259E65D50945953846C57D * L_135 = (List_1_tC83E49B6D8D9141EE2259E65D50945953846C57D *)il2cpp_codegen_object_new(List_1_tC83E49B6D8D9141EE2259E65D50945953846C57D_il2cpp_TypeInfo_var);
+		List_1__ctor_mFDEAA2F6957949B6925A5BFE84DDC19F3118395E(L_135, /*hidden argument*/List_1__ctor_mFDEAA2F6957949B6925A5BFE84DDC19F3118395E_RuntimeMethod_var);
+		V_3 = L_135;
+		goto IL_0328;
 	}
 
-IL_0289:
+IL_02f3:
 	{
 		// predList.Add(vert);
-		List_1_tC83E49B6D8D9141EE2259E65D50945953846C57D * L_115 = V_3;
-		Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_116 = V_2;
-		List_1_Add_m0150ABE51993042C84BCD048641EC93AA056945A(L_115, L_116, /*hidden argument*/List_1_Add_m0150ABE51993042C84BCD048641EC93AA056945A_RuntimeMethod_var);
+		List_1_tC83E49B6D8D9141EE2259E65D50945953846C57D * L_136 = V_3;
+		Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_137 = V_2;
+		List_1_Add_m0150ABE51993042C84BCD048641EC93AA056945A(L_136, L_137, /*hidden argument*/List_1_Add_m0150ABE51993042C84BCD048641EC93AA056945A_RuntimeMethod_var);
 		// mapManager.tiles[vert].isPath = true; // making it so it only takes O(n) time to visualize tilepath
-		Dijkstra_tA9804A39572A0E3EE1DCDD489B16C15AFF294817 * L_117 = V_1;
-		MapManager_t4589A236B4CE205CE81E79FECBCD6B3F3F99F225 * L_118 = L_117->get_mapManager_4();
-		Dictionary_2_t245E9FE36D93681DBF00922FDE124397B10C5B96 * L_119 = L_118->get_tiles_6();
-		Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_120 = V_2;
-		TileScript_t6E723D639E7213BAEA1F8346F405265665193642 * L_121;
-		L_121 = Dictionary_2_get_Item_mE363511C92A9A3D9742DDF72B542806FCCA52730(L_119, L_120, /*hidden argument*/Dictionary_2_get_Item_mE363511C92A9A3D9742DDF72B542806FCCA52730_RuntimeMethod_var);
-		L_121->set_isPath_6((bool)1);
+		Dijkstra_tA9804A39572A0E3EE1DCDD489B16C15AFF294817 * L_138 = V_1;
+		MapManager_t4589A236B4CE205CE81E79FECBCD6B3F3F99F225 * L_139 = L_138->get_mapManager_4();
+		Dictionary_2_t245E9FE36D93681DBF00922FDE124397B10C5B96 * L_140 = L_139->get_tiles_6();
+		Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_141 = V_2;
+		TileScript_t6E723D639E7213BAEA1F8346F405265665193642 * L_142;
+		L_142 = Dictionary_2_get_Item_mE363511C92A9A3D9742DDF72B542806FCCA52730(L_140, L_141, /*hidden argument*/Dictionary_2_get_Item_mE363511C92A9A3D9742DDF72B542806FCCA52730_RuntimeMethod_var);
+		L_142->set_isPath_6((bool)1);
 		// vert = mapManager.tiles[vert].pred;
-		Dijkstra_tA9804A39572A0E3EE1DCDD489B16C15AFF294817 * L_122 = V_1;
-		MapManager_t4589A236B4CE205CE81E79FECBCD6B3F3F99F225 * L_123 = L_122->get_mapManager_4();
-		Dictionary_2_t245E9FE36D93681DBF00922FDE124397B10C5B96 * L_124 = L_123->get_tiles_6();
-		Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_125 = V_2;
-		TileScript_t6E723D639E7213BAEA1F8346F405265665193642 * L_126;
-		L_126 = Dictionary_2_get_Item_mE363511C92A9A3D9742DDF72B542806FCCA52730(L_124, L_125, /*hidden argument*/Dictionary_2_get_Item_mE363511C92A9A3D9742DDF72B542806FCCA52730_RuntimeMethod_var);
-		Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_127 = L_126->get_pred_8();
-		V_2 = L_127;
+		Dijkstra_tA9804A39572A0E3EE1DCDD489B16C15AFF294817 * L_143 = V_1;
+		MapManager_t4589A236B4CE205CE81E79FECBCD6B3F3F99F225 * L_144 = L_143->get_mapManager_4();
+		Dictionary_2_t245E9FE36D93681DBF00922FDE124397B10C5B96 * L_145 = L_144->get_tiles_6();
+		Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_146 = V_2;
+		TileScript_t6E723D639E7213BAEA1F8346F405265665193642 * L_147;
+		L_147 = Dictionary_2_get_Item_mE363511C92A9A3D9742DDF72B542806FCCA52730(L_145, L_146, /*hidden argument*/Dictionary_2_get_Item_mE363511C92A9A3D9742DDF72B542806FCCA52730_RuntimeMethod_var);
+		Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_148 = L_147->get_pred_8();
+		V_2 = L_148;
 	}
 
-IL_02be:
+IL_0328:
 	{
 		// while(vert != mapManager.start){
-		Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_128 = V_2;
-		Dijkstra_tA9804A39572A0E3EE1DCDD489B16C15AFF294817 * L_129 = V_1;
-		MapManager_t4589A236B4CE205CE81E79FECBCD6B3F3F99F225 * L_130 = L_129->get_mapManager_4();
-		Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_131 = L_130->get_start_7();
-		bool L_132;
-		L_132 = Vector3Int_op_Inequality_mA54738AF377CBBA523CAEF47398C32F0338BF8E7_inline(L_128, L_131, /*hidden argument*/NULL);
-		if (L_132)
+		Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_149 = V_2;
+		Dijkstra_tA9804A39572A0E3EE1DCDD489B16C15AFF294817 * L_150 = V_1;
+		MapManager_t4589A236B4CE205CE81E79FECBCD6B3F3F99F225 * L_151 = L_150->get_mapManager_4();
+		Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_152 = L_151->get_start_7();
+		bool L_153;
+		L_153 = Vector3Int_op_Inequality_mA54738AF377CBBA523CAEF47398C32F0338BF8E7_inline(L_149, L_152, /*hidden argument*/NULL);
+		if (L_153)
 		{
-			goto IL_0289;
+			goto IL_02f3;
 		}
 	}
 	{
 		// foreach(Vector3Int coords in mapManager.tiles.Keys){
-		Dijkstra_tA9804A39572A0E3EE1DCDD489B16C15AFF294817 * L_133 = V_1;
-		MapManager_t4589A236B4CE205CE81E79FECBCD6B3F3F99F225 * L_134 = L_133->get_mapManager_4();
-		Dictionary_2_t245E9FE36D93681DBF00922FDE124397B10C5B96 * L_135 = L_134->get_tiles_6();
-		KeyCollection_t79A7609EE0FE51E33FB7BB7FBC82D33F000CF0B3 * L_136;
-		L_136 = Dictionary_2_get_Keys_m1744EB032A163FDB4A690EA6D59F63B1DE1F092C(L_135, /*hidden argument*/Dictionary_2_get_Keys_m1744EB032A163FDB4A690EA6D59F63B1DE1F092C_RuntimeMethod_var);
-		Enumerator_t84D356B317F5DF70D7D1463D82AA8A8D23B2D7C5  L_137;
-		L_137 = KeyCollection_GetEnumerator_m8DBDB4B1CAFCA90E9F183EE44FACEB76D3B3F6A2(L_136, /*hidden argument*/KeyCollection_GetEnumerator_m8DBDB4B1CAFCA90E9F183EE44FACEB76D3B3F6A2_RuntimeMethod_var);
-		V_7 = L_137;
+		Dijkstra_tA9804A39572A0E3EE1DCDD489B16C15AFF294817 * L_154 = V_1;
+		MapManager_t4589A236B4CE205CE81E79FECBCD6B3F3F99F225 * L_155 = L_154->get_mapManager_4();
+		Dictionary_2_t245E9FE36D93681DBF00922FDE124397B10C5B96 * L_156 = L_155->get_tiles_6();
+		KeyCollection_t79A7609EE0FE51E33FB7BB7FBC82D33F000CF0B3 * L_157;
+		L_157 = Dictionary_2_get_Keys_m1744EB032A163FDB4A690EA6D59F63B1DE1F092C(L_156, /*hidden argument*/Dictionary_2_get_Keys_m1744EB032A163FDB4A690EA6D59F63B1DE1F092C_RuntimeMethod_var);
+		Enumerator_t84D356B317F5DF70D7D1463D82AA8A8D23B2D7C5  L_158;
+		L_158 = KeyCollection_GetEnumerator_m8DBDB4B1CAFCA90E9F183EE44FACEB76D3B3F6A2(L_157, /*hidden argument*/KeyCollection_GetEnumerator_m8DBDB4B1CAFCA90E9F183EE44FACEB76D3B3F6A2_RuntimeMethod_var);
+		V_7 = L_158;
 	}
 
-IL_02e8:
+IL_0352:
 	try
 	{ // begin try (depth: 1)
 		{
-			goto IL_0359;
+			goto IL_03c3;
 		}
 
-IL_02ea:
+IL_0354:
 		{
 			// foreach(Vector3Int coords in mapManager.tiles.Keys){
-			Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_138;
-			L_138 = Enumerator_get_Current_mBE7E52D5DCAFA92CF5677546C14BED6BAD8CF800_inline((Enumerator_t84D356B317F5DF70D7D1463D82AA8A8D23B2D7C5 *)(&V_7), /*hidden argument*/Enumerator_get_Current_mBE7E52D5DCAFA92CF5677546C14BED6BAD8CF800_RuntimeMethod_var);
-			V_8 = L_138;
+			Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_159;
+			L_159 = Enumerator_get_Current_mBE7E52D5DCAFA92CF5677546C14BED6BAD8CF800_inline((Enumerator_t84D356B317F5DF70D7D1463D82AA8A8D23B2D7C5 *)(&V_7), /*hidden argument*/Enumerator_get_Current_mBE7E52D5DCAFA92CF5677546C14BED6BAD8CF800_RuntimeMethod_var);
+			V_8 = L_159;
 			// if (!mapManager.tiles[coords].isPath && !mapManager.tiles[coords].isWall){
-			Dijkstra_tA9804A39572A0E3EE1DCDD489B16C15AFF294817 * L_139 = V_1;
-			MapManager_t4589A236B4CE205CE81E79FECBCD6B3F3F99F225 * L_140 = L_139->get_mapManager_4();
-			Dictionary_2_t245E9FE36D93681DBF00922FDE124397B10C5B96 * L_141 = L_140->get_tiles_6();
-			Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_142 = V_8;
-			TileScript_t6E723D639E7213BAEA1F8346F405265665193642 * L_143;
-			L_143 = Dictionary_2_get_Item_mE363511C92A9A3D9742DDF72B542806FCCA52730(L_141, L_142, /*hidden argument*/Dictionary_2_get_Item_mE363511C92A9A3D9742DDF72B542806FCCA52730_RuntimeMethod_var);
-			bool L_144 = L_143->get_isPath_6();
-			if (L_144)
+			Dijkstra_tA9804A39572A0E3EE1DCDD489B16C15AFF294817 * L_160 = V_1;
+			MapManager_t4589A236B4CE205CE81E79FECBCD6B3F3F99F225 * L_161 = L_160->get_mapManager_4();
+			Dictionary_2_t245E9FE36D93681DBF00922FDE124397B10C5B96 * L_162 = L_161->get_tiles_6();
+			Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_163 = V_8;
+			TileScript_t6E723D639E7213BAEA1F8346F405265665193642 * L_164;
+			L_164 = Dictionary_2_get_Item_mE363511C92A9A3D9742DDF72B542806FCCA52730(L_162, L_163, /*hidden argument*/Dictionary_2_get_Item_mE363511C92A9A3D9742DDF72B542806FCCA52730_RuntimeMethod_var);
+			bool L_165 = L_164->get_isPath_6();
+			if (L_165)
 			{
-				goto IL_0359;
+				goto IL_03c3;
 			}
 		}
 
-IL_030c:
+IL_0376:
 		{
-			Dijkstra_tA9804A39572A0E3EE1DCDD489B16C15AFF294817 * L_145 = V_1;
-			MapManager_t4589A236B4CE205CE81E79FECBCD6B3F3F99F225 * L_146 = L_145->get_mapManager_4();
-			Dictionary_2_t245E9FE36D93681DBF00922FDE124397B10C5B96 * L_147 = L_146->get_tiles_6();
-			Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_148 = V_8;
-			TileScript_t6E723D639E7213BAEA1F8346F405265665193642 * L_149;
-			L_149 = Dictionary_2_get_Item_mE363511C92A9A3D9742DDF72B542806FCCA52730(L_147, L_148, /*hidden argument*/Dictionary_2_get_Item_mE363511C92A9A3D9742DDF72B542806FCCA52730_RuntimeMethod_var);
-			bool L_150 = L_149->get_isWall_4();
-			if (L_150)
+			Dijkstra_tA9804A39572A0E3EE1DCDD489B16C15AFF294817 * L_166 = V_1;
+			MapManager_t4589A236B4CE205CE81E79FECBCD6B3F3F99F225 * L_167 = L_166->get_mapManager_4();
+			Dictionary_2_t245E9FE36D93681DBF00922FDE124397B10C5B96 * L_168 = L_167->get_tiles_6();
+			Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_169 = V_8;
+			TileScript_t6E723D639E7213BAEA1F8346F405265665193642 * L_170;
+			L_170 = Dictionary_2_get_Item_mE363511C92A9A3D9742DDF72B542806FCCA52730(L_168, L_169, /*hidden argument*/Dictionary_2_get_Item_mE363511C92A9A3D9742DDF72B542806FCCA52730_RuntimeMethod_var);
+			bool L_171 = L_170->get_isWall_4();
+			if (L_171)
 			{
-				goto IL_0359;
+				goto IL_03c3;
 			}
 		}
 
-IL_0325:
+IL_038f:
 		{
 			// map.SetTileFlags(coords, TileFlags.None);
-			Dijkstra_tA9804A39572A0E3EE1DCDD489B16C15AFF294817 * L_151 = V_1;
-			Tilemap_t0A1D80C1C0EDF8BDB0A2E274DC0826EF03642F31 * L_152 = L_151->get_map_7();
-			Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_153 = V_8;
-			Tilemap_SetTileFlags_mC88DE5654C5FAB5CFBDD0CAD7ED500AD0B1033C2(L_152, L_153, 0, /*hidden argument*/NULL);
+			Dijkstra_tA9804A39572A0E3EE1DCDD489B16C15AFF294817 * L_172 = V_1;
+			Tilemap_t0A1D80C1C0EDF8BDB0A2E274DC0826EF03642F31 * L_173 = L_172->get_map_7();
+			Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_174 = V_8;
+			Tilemap_SetTileFlags_mC88DE5654C5FAB5CFBDD0CAD7ED500AD0B1033C2(L_173, L_174, 0, /*hidden argument*/NULL);
 			// map.SetColor(coords, new Color(1, 1, 1, 1));
-			Dijkstra_tA9804A39572A0E3EE1DCDD489B16C15AFF294817 * L_154 = V_1;
-			Tilemap_t0A1D80C1C0EDF8BDB0A2E274DC0826EF03642F31 * L_155 = L_154->get_map_7();
-			Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_156 = V_8;
-			Color_tF40DAF76C04FFECF3FE6024F85A294741C9CC659  L_157;
-			memset((&L_157), 0, sizeof(L_157));
-			Color__ctor_m679019E6084BF7A6F82590F66F5F695F6A50ECC5((&L_157), (1.0f), (1.0f), (1.0f), (1.0f), /*hidden argument*/NULL);
-			Tilemap_SetColor_mC78B3CC9FFA5C5EB63D061FBBD047D24C13BEA81(L_155, L_156, L_157, /*hidden argument*/NULL);
+			Dijkstra_tA9804A39572A0E3EE1DCDD489B16C15AFF294817 * L_175 = V_1;
+			Tilemap_t0A1D80C1C0EDF8BDB0A2E274DC0826EF03642F31 * L_176 = L_175->get_map_7();
+			Vector3Int_t197C3BA05CF19F1A22D40F8AE64CD4102AFB77EA  L_177 = V_8;
+			Color_tF40DAF76C04FFECF3FE6024F85A294741C9CC659  L_178;
+			memset((&L_178), 0, sizeof(L_178));
+			Color__ctor_m679019E6084BF7A6F82590F66F5F695F6A50ECC5((&L_178), (1.0f), (1.0f), (1.0f), (1.0f), /*hidden argument*/NULL);
+			Tilemap_SetColor_mC78B3CC9FFA5C5EB63D061FBBD047D24C13BEA81(L_176, L_177, L_178, /*hidden argument*/NULL);
 		}
 
-IL_0359:
+IL_03c3:
 		{
 			// foreach(Vector3Int coords in mapManager.tiles.Keys){
-			bool L_158;
-			L_158 = Enumerator_MoveNext_m94C833B421A86958F78EF25421F27E5334A3A10C((Enumerator_t84D356B317F5DF70D7D1463D82AA8A8D23B2D7C5 *)(&V_7), /*hidden argument*/Enumerator_MoveNext_m94C833B421A86958F78EF25421F27E5334A3A10C_RuntimeMethod_var);
-			if (L_158)
+			bool L_179;
+			L_179 = Enumerator_MoveNext_m94C833B421A86958F78EF25421F27E5334A3A10C((Enumerator_t84D356B317F5DF70D7D1463D82AA8A8D23B2D7C5 *)(&V_7), /*hidden argument*/Enumerator_MoveNext_m94C833B421A86958F78EF25421F27E5334A3A10C_RuntimeMethod_var);
+			if (L_179)
 			{
-				goto IL_02ea;
+				goto IL_0354;
 			}
 		}
 
-IL_0362:
+IL_03cc:
 		{
-			IL2CPP_LEAVE(0x372, FINALLY_0364);
+			IL2CPP_LEAVE(0x3DC, FINALLY_03ce);
 		}
 	} // end try (depth: 1)
 	catch(Il2CppExceptionWrapper& e)
 	{
 		__last_unhandled_exception = (Exception_t *)e.ex;
-		goto FINALLY_0364;
+		goto FINALLY_03ce;
 	}
 
-FINALLY_0364:
+FINALLY_03ce:
 	{ // begin finally (depth: 1)
 		Enumerator_Dispose_m23F73B815D52415BA49378576D444624B7259D92((Enumerator_t84D356B317F5DF70D7D1463D82AA8A8D23B2D7C5 *)(&V_7), /*hidden argument*/Enumerator_Dispose_m23F73B815D52415BA49378576D444624B7259D92_RuntimeMethod_var);
-		IL2CPP_END_FINALLY(868)
+		IL2CPP_END_FINALLY(974)
 	} // end finally (depth: 1)
-	IL2CPP_CLEANUP(868)
+	IL2CPP_CLEANUP(974)
 	{
 		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
-		IL2CPP_JUMP_TBL(0x372, IL_0372)
+		IL2CPP_JUMP_TBL(0x3DC, IL_03dc)
 	}
 
-IL_0372:
+IL_03dc:
 	{
 		// } // startAlgorithm()
 		return (bool)0;

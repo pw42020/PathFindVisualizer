@@ -13,7 +13,6 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
-    - UnityEditor.U2D.IK.IKGizmos
     Unity.2D.IK.Runtime.dll:
     - UnityEditor.U2D.IK.IKEditorManagerHelper
     Unity.2D.Tilemap.Editor.dll:
@@ -71,45 +70,45 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 648}
     - Class: 114
-      Script: {instanceID: 1536}
+      Script: {instanceID: 1532}
     - Class: 114
-      Script: {instanceID: 1730}
+      Script: {instanceID: 1726}
     - Class: 114
-      Script: {instanceID: 1842}
+      Script: {instanceID: 1838}
     - Class: 114
-      Script: {instanceID: 2144}
+      Script: {instanceID: 2140}
     - Class: 114
-      Script: {instanceID: 2220}
+      Script: {instanceID: 2216}
     - Class: 114
-      Script: {instanceID: 2228}
+      Script: {instanceID: 2224}
     - Class: 114
-      Script: {instanceID: 2642}
+      Script: {instanceID: 2638}
     - Class: 114
-      Script: {instanceID: 2676}
+      Script: {instanceID: 2672}
     - Class: 114
-      Script: {instanceID: 2804}
+      Script: {instanceID: 2800}
     - Class: 114
-      Script: {instanceID: 3020}
+      Script: {instanceID: 3016}
     - Class: 114
-      Script: {instanceID: 3262}
+      Script: {instanceID: 3258}
     - Class: 114
-      Script: {instanceID: 3374}
+      Script: {instanceID: 3370}
     - Class: 114
-      Script: {instanceID: 3726}
+      Script: {instanceID: 3722}
     - Class: 114
-      Script: {instanceID: 3996}
+      Script: {instanceID: 3992}
     - Class: 114
-      Script: {instanceID: 4112}
+      Script: {instanceID: 4108}
     - Class: 114
-      Script: {instanceID: 4462}
+      Script: {instanceID: 4458}
     - Class: 114
-      Script: {instanceID: 4704}
+      Script: {instanceID: 4700}
     - Class: 114
-      Script: {instanceID: 4806}
+      Script: {instanceID: 4802}
     - Class: 114
-      Script: {instanceID: 4924}
+      Script: {instanceID: 4920}
     - Class: 114
-      Script: {instanceID: 5082}
+      Script: {instanceID: 5078}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -702,5 +701,5 @@ ScriptsOnlyBuild:
   platform: 20
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/Ninja/OneDrive/Documents/GitHub/PathFindVisualizer/build/WebGL
+  playerPath: C:/Users/Ninja/OneDrive/Documents/GitHub/PathFindVisualizer/builds/WebGL
     build
